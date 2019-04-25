@@ -5,6 +5,7 @@
   "homepage": "http://hmliao14.github.io/Material-UI-Showcase-App",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
