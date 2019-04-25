@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Material-UI-Showcase-App/static/css/main.584f321a.chunk.css",
+    "main.js": "/Material-UI-Showcase-App/static/js/main.7dfbd561.chunk.js",
+    "main.js.map": "/Material-UI-Showcase-App/static/js/main.7dfbd561.chunk.js.map",
+    "runtime~main.js": "/Material-UI-Showcase-App/static/js/runtime~main.b446cf9f.js",
+    "runtime~main.js.map": "/Material-UI-Showcase-App/static/js/runtime~main.b446cf9f.js.map",
+    "static/js/2.b41502e9.chunk.js": "/Material-UI-Showcase-App/static/js/2.b41502e9.chunk.js",
+    "static/js/2.b41502e9.chunk.js.map": "/Material-UI-Showcase-App/static/js/2.b41502e9.chunk.js.map",
+    "index.html": "/Material-UI-Showcase-App/index.html",
+    "precache-manifest.25dd3ce5fc5a732f861e265efaf99987.js": "/Material-UI-Showcase-App/precache-manifest.25dd3ce5fc5a732f861e265efaf99987.js",
+    "service-worker.js": "/Material-UI-Showcase-App/service-worker.js",
+    "static/css/main.584f321a.chunk.css.map": "/Material-UI-Showcase-App/static/css/main.584f321a.chunk.css.map",
+    "static/media/logo.svg": "/Material-UI-Showcase-App/static/media/logo.5d5d9eef.svg"
+  }
+}
