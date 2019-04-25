@@ -135,3 +135,11 @@ iframe {
 #root.no-margin-left {
   margin-left: 0;
 }
+.App {
+  margin-top: 79px;
+}
+@media screen and (max-width: 568px) {
+  .App {
+    margin-top: 71px;
+  }
+}
