@@ -2,6 +2,7 @@
   "name": "material-ui-showcase-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://hmliao14.github.io/Material-UI-Showcase-App",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
@@ -9,6 +10,7 @@
     "react-scripts": "3.0.0"
   },
   "scripts": {
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
