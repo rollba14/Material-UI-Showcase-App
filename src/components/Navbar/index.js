@@ -1,15 +1,19 @@
 import React, {Component} from 'react';
 import './style.styl';
 import PropTypes from 'prop-types';
-import {AppBar, Toolbar, Icons, IconButton, Button, withStyles} from '../';
+import {AppBar, Toolbar, Icons, IconButton, Button, withStyles, Typography} from '../';
 
 const styles = {
   root: {
     backgroundColor: '#26a69a',
+    flexGrow: 1,
   },
   appbar: {
     height: 'inherit',
     backgroundColor: 'inherit',
+  },
+  grow:{
+    flexGrow: 1,
   }
 };
 
@@ -23,6 +27,12 @@ class Navbar extends Component{
             <Button>
               <Icons.Menu/>
             </Button>
+            <Typography className={classes.grow}>
+              MUI - Showcase
+            </Typography>
+            <IconButton>
+              <Icons.AccountCircle/>
+            </IconButton>
           </Toolbar>
         </AppBar>
       </div>
