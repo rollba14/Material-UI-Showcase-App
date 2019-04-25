@@ -18,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "css": "stylus -w src/stylus/index.styl -o src"
   },
   "eslintConfig": {
     "extends": "react-app"
