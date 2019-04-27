@@ -9,7 +9,7 @@ const styles = {
     position: 'absolute',
     zIndex: '100',
     height: '100vh',
-    width: '160px',
+    width: '200px',
     top: '0',
     left: '0',
     paddingTop: '79px',
@@ -18,14 +18,19 @@ const styles = {
     height: 'inherit',
     backgroundColor: 'inherit',
   },
+  hidden: {
+    display: 'none',
+  }
 };
 
 class Sidebar extends Component{
   render(){
     const {classes} = this.props;
     return(
-      <div className={classes.root}>
-        this is a sidebar
+      <div className={this.props.showSidebar ? '' : classes.hidden}>
+        <div className={classes.root}>
+          this is a sidebar
+        </div>
       </div>
     )
   }
