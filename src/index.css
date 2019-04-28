@@ -22,6 +22,7 @@ body {
   height: 100%;
   line-height: 1;
   background-color: #fbfbfb;
+  margin: 0;
 }
 .strong {
   font-weight: 700;
@@ -136,10 +137,22 @@ iframe {
   margin-left: 0;
 }
 .App {
-  margin-top: 79px;
+  padding-top: 64px;
+  max-height: calc(100vh);
+  height: calc(100vh);
 }
 @media screen and (max-width: 568px) {
   .App {
-    margin-top: 71px;
+    padding-top: 56px;
+    max-height: calc(100vh);
+    height: calc(100vh);
   }
+}
+.main {
+  width: 100vw;
+  height: 100%;
+  overflow-y: scroll;
+}
+.content {
+  max-height: 100%;
 }
