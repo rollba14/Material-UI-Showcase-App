@@ -136,6 +136,13 @@ iframe {
 #root.no-margin-left {
   margin-left: 0;
 }
+.side-bar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  overflow-y: scroll;
+  padding: 10px;
+}
 .App {
   padding-top: 64px;
   max-height: calc(100vh);
@@ -148,11 +155,12 @@ iframe {
     height: calc(100vh);
   }
 }
-.main {
-  width: 100vw;
-  height: 100%;
-  overflow-y: scroll;
-}
 .content {
-  max-height: 100%;
+  padding: 20px;
+}
+.hidden {
+  display: none;
+}
+.padding-left {
+  padding-left: 200px;
 }

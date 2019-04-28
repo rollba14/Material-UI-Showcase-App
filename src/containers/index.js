@@ -17,17 +17,19 @@ class App extends Component {
     })
   }
 
-  
+
 
   render(){
     return (
       <div className="App">
         <Navbar toggleSidebar={this.toggleSidebar}/>
         <div className="main">
-          <ClickAwayListener onClickAway={()=>{this.toggleSidebar()}}>
-            <Sidebar openSideBar={this.state.openSideBar}/>
-          </ClickAwayListener>
-          main content
+          <Sidebar openSideBar={this.state.openSideBar}/>
+          <div className={this.state.openSideBar? 'padding-left':''}>
+            <div className="content">
+              main content here
+            </div>
+          </div>
         </div>
       </div>
     );
