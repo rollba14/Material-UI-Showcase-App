@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import './style.styl';
 import PropTypes from 'prop-types';
-import {AppBar, Toolbar, Icons, Popover, IconButton, Button, withStyles, Typography} from '../';
+import {AppBar, Toolbar, Icons, Menu, MenuItem, IconButton, Button, withStyles, Typography, List, ListItem} from '../';
 
-const styles = {
-  root: {
-
-  }
-};
+const styles = theme => ({
+  typography: {
+    margin: theme.spacing.unit * 2,
+  },
+});
 
 class IconPopover extends Component{
   constructor(props){
@@ -17,7 +17,7 @@ class IconPopover extends Component{
     }
   };
 
-  handleClick = event = >{
+  handleClick = event =>{
     this.setState({
       anchorEl: event.currentTarget,
     });
@@ -29,36 +29,34 @@ class IconPopover extends Component{
     })
   }
 
-
-
   render(){
     const {classes} = this.props;
+    const {anchorEl} = this.state;
     return(
-      <div className={this.classes.root}>
+      <div>
         <IconButton
-          aria-owns={open ? 'icon-popper':undefined}
+          aria-owns={anchorEl ? 'icon-popper':undefined}
           aria-haspopup='true'
-          variant="contained"
           onClick={this.handleClick}
         >
           <Icons.AccountCircle/>
         </IconButton>
-        <Popover
-          id="simple-popper"
-          open={open}
+        <Menu
+          id="icon-popper"
+          open={Boolean(anchorEl)}
           anchorEl={anchorEl}
           onClose={this.handleClose}
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'center',
-          }}
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'center',
-          }}
         >
-          <a href="https://www.google.com/">Google</a>
-        </Popover>
+          <MenuItem onClick={this.handleClose}>
+            <a href="https://www.yahoo.com/">Yahoo</a>
+          </MenuItem>
+          <MenuItem>
+            <a href="https://www.google.com/">Google</a>
+          </MenuItem>
+          <MenuItem onClick={this.handleClose}>
+            <a href="https://www.bing.com/">Bing</a>
+          </MenuItem>
+        </Menu>
       </div>
     )
   }

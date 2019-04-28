@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Navbar from '../components/Navbar';
+import Navbar from './Navbar';
 import Sidebar from '../components/Sidebar';
 import {Grid} from '../components';
 
