@@ -25,7 +25,7 @@ class Navbar extends Component{
       <div className={classes.root}>
         <AppBar className={classes.appbar}>
           <Toolbar className={classes.appbar}>
-            <Button>
+            <Button onClick={()=>{this.props.toggleSidebar()}}>
               <Icons.Menu/>
             </Button>
             <Typography className={classes.grow}>
