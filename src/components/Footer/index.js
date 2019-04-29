@@ -4,7 +4,7 @@ import {AppBar, Toolbar, Drawer, Icons, IconButton, Button, withStyles, Typograp
 
 function Footer(props){
   return(
-    <div className={props.openSideBar? 'footer shorten':'footer'}>
+    <div className='footer'>
       THIS IS A FOOTER
     </div>
   )

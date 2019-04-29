@@ -31,7 +31,7 @@ class App extends Component {
         <div className="App">
           <Navbar toggleSidebar={this.toggleSidebar}/>
           <Sidebar openSideBar={this.state.openSideBar}/>
-          <div className={this.state.openSideBar? 'padding-left main':'main'}>
+          <div className={this.state.openSideBar? 'margin-left main':'main'}>
               <div className="content">
                 <Switch>
                   <Route exact path='/' component={HomePage}/>
@@ -42,7 +42,7 @@ class App extends Component {
 
                 </Switch>
               </div>
-              <Footer openSideBar={this.state.openSideBar}/>
+              <Footer/>
           </div>
         </div>
       </BrowserRouter>

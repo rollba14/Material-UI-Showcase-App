@@ -144,7 +144,7 @@ iframe {
   padding: 20px;
   border-top: 1px solid #cecece;
 }
-.footer.shorten {
+.margin-left .footer {
   width: calc(100% - 230px);
 }
 .not-found-page {
@@ -184,10 +184,18 @@ iframe {
 .content {
   padding: 25px 35px;
   line-height: 1.5em;
+  width: 100%;
+}
+.main {
+  text-align: center;
+  width: 100vw;
+}
+.main.margin-left {
+  width: calc(100vw - 230px);
 }
 .hidden {
   display: none;
 }
-.padding-left {
-  padding-left: 230px;
+.margin-left {
+  margin-left: 230px;
 }

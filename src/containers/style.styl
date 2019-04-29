@@ -17,9 +17,16 @@ mainDivWidth = 100vw - sideBarWidth
 .content
   padding: contentPadding
   line-height: 1.5em;
+  width: 100%;
+
+.main
+  text-align: center;
+  width: 100vw;
+  &.margin-left
+    width: "calc(100vw - %s)" % sideBarWidth
 
 .hidden
   display: none;
 
-.padding-left
-  padding-left: sideBarWidth
+.margin-left
+  margin-left: sideBarWidth
