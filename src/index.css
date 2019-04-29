@@ -147,6 +147,9 @@ iframe {
 .footer.shorten {
   width: calc(100% - 230px);
 }
+.not-found-page {
+  text-align: center;
+}
 .navbar-root {
   background-color: #4db6ac;
   flex-grow: 1;
