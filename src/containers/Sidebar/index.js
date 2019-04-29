@@ -14,54 +14,44 @@ class Sidebar extends Component{
         className={this.props.openSideBar ? "side-bar":'side-bar hidden'}
       >
         <List component="nav">
-          <Router.Link to="/">
-            <ListItem button>
-              <ListItemIcon>
-                <Icons.Home/>
-              </ListItemIcon>
-              <ListItemText primary="Home"/>
-            </ListItem>
-          </Router.Link>
+          <ListItem button component={Router.Link} to={'/'}>
+            <ListItemIcon>
+              <Icons.Home/>
+            </ListItemIcon>
+            <ListItemText primary="Home"/>
+          </ListItem>
           <Divider/>
 
-          <Router.Link to="/colors">
-            <ListItem button>
-              <ListItemIcon>
-                <Icons.ColorLens/>
-              </ListItemIcon>
-              <ListItemText primary="Colors"/>
-            </ListItem>
-          </Router.Link>
+          <ListItem button component={Router.Link} to={'/colors'}>
+            <ListItemIcon>
+              <Icons.ColorLens/>
+            </ListItemIcon>
+            <ListItemText primary="Colors"/>
+          </ListItem>
           <Divider/>
 
-          <Router.Link to="/components">
-            <ListItem button>
-              <ListItemIcon>
-                <Icons.Widgets/>
-              </ListItemIcon>
-              <ListItemText primary="Components"/>
-            </ListItem>
-          </Router.Link>
+          <ListItem button component={Router.Link} to={'/components'}>
+            <ListItemIcon>
+              <Icons.Widgets/>
+            </ListItemIcon>
+            <ListItemText primary="Components"/>
+          </ListItem>
           <Divider/>
 
-          <Router.Link to="/charts">
-            <ListItem button>
-              <ListItemIcon>
-                <Icons.ShowChart/>
-              </ListItemIcon>
-              <ListItemText primary="Charts"/>
-            </ListItem>
-          </Router.Link>
+          <ListItem button component={Router.Link} to={'/charts'}>
+            <ListItemIcon>
+              <Icons.ShowChart/>
+            </ListItemIcon>
+            <ListItemText primary="Charts"/>
+          </ListItem>
           <Divider/>
 
-          <Router.Link to="/icons">
-            <ListItem button>
-              <ListItemIcon>
-                <Icons.BlurOn/>
-              </ListItemIcon>
-              <ListItemText primary="Iconography"/>
-            </ListItem>
-          </Router.Link>
+          <ListItem button component={Router.Link} to={'/icons'}>
+            <ListItemIcon>
+              <Icons.BlurOn/>
+            </ListItemIcon>
+            <ListItemText primary="Iconography"/>
+          </ListItem>
           <Divider/>
         </List>
       </div>
