@@ -169,6 +169,9 @@ iframe {
   padding: 15px 0;
   border-right: 1px solid #cecece;
 }
+.side-bar .nested {
+  padding-left: 15px;
+}
 .App {
   padding-top: 64px;
   max-height: 100vh;

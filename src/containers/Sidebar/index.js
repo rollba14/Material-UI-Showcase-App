@@ -1,11 +1,20 @@
 import React, {Component} from 'react';
 import './style.styl';
 import PropTypes from 'prop-types';
-import {AppBar, Toolbar, Drawer, Icons, IconButton, Button, withStyles, Typography, List, ListItem, ListItemIcon, ListItemText, Divider, Router} from '../../components';
+import {AppBar, Toolbar, Drawer, Icons, IconButton, Button, withStyles, Typography, List, ListItem, ListItemIcon, ListItemText, Divider, Router, Collapse} from '../../components';
 
 class Sidebar extends Component{
   constructor(props){
     super(props)
+    this.state={
+      open: false,
+    }
+  }
+
+  toggleComp=()=>{
+    this.setState({
+      open: !this.state.open
+    })
   }
 
   render(){
@@ -30,12 +39,23 @@ class Sidebar extends Component{
           </ListItem>
           <Divider/>
 
-          <ListItem button component={Router.Link} to={'/components'}>
+          <ListItem button component={Router.Link} to={'/components'} onClick={()=>{this.toggleComp()}}>
             <ListItemIcon>
               <Icons.Widgets/>
             </ListItemIcon>
             <ListItemText primary="Components"/>
+            {this.state.open ? <Icons.ExpandLess /> : <Icons.ExpandMore />}
           </ListItem>
+          <Collapse in={this.state.open} unmountOnExit className="nested">
+            <List>
+            <ListItem button component={Router.Link} to={'/charts'}>
+              <ListItemIcon>
+                <Icons.TagFaces/>
+              </ListItemIcon>
+              <ListItemText primary=":D"/>
+            </ListItem>
+            </List>
+          </Collapse>
           <Divider/>
 
           <ListItem button component={Router.Link} to={'/charts'}>
