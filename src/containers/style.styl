@@ -1,19 +1,23 @@
+sideBarWidth = 200px
+navBarHeight = 64px
+contentPadding = 20px
+
+
 .App
-  padding-top: 64px;
-  max-height: calc(100vh)
-  height: calc(100vh)
+  padding-top: navBarHeight;
+  max-height: 100vh
+  height: 100vh
 
   @media screen and (max-width: 568px)
-    padding-top: 56px;
-    max-height: calc(100vh)
-    height: calc(100vh)
-
+    padding-top: navBarHeight - 8px;
+    max-height: 100vh
+    height: 100vh
 
 .content
-  padding: 20px
+  padding: contentPadding
 
 .hidden
   display: none;
 
 .padding-left
-  padding-left: 200px
+  padding-left: sideBarWidth

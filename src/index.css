@@ -152,14 +152,14 @@ iframe {
 }
 .App {
   padding-top: 64px;
-  max-height: calc(100vh);
-  height: calc(100vh);
+  max-height: 100vh;
+  height: 100vh;
 }
 @media screen and (max-width: 568px) {
   .App {
     padding-top: 56px;
-    max-height: calc(100vh);
-    height: calc(100vh);
+    max-height: 100vh;
+    height: 100vh;
   }
 }
 .content {
