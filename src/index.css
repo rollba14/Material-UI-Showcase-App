@@ -147,6 +147,17 @@ iframe {
 .footer.shorten {
   width: calc(100% - 230px);
 }
+.navbar-root {
+  background-color: #4db6ac;
+  flex-grow: 1;
+}
+.navbar-root > header {
+  height: inherit;
+  background-color: inherit;
+}
+.navbar-root .grow {
+  flex-grow: 1;
+}
 .side-bar {
   height: 100%;
   width: 230px;
