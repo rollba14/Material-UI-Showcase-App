@@ -25,8 +25,4 @@ class Navbar extends Component{
   }
 }
 
-Navbar.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
 export default Navbar;
