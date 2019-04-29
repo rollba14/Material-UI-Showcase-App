@@ -1,5 +1,10 @@
+sideBarWidth = 230px
+
 .footer
   position: fixed
   bottom: 0
-  background-color: #81d4fa
+  width: 100%
+  background-color: #fff9c4
   padding: 20px
+  &.shorten
+    width: "calc(100% - %s)" % sideBarWidth

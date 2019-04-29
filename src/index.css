@@ -139,12 +139,16 @@ iframe {
 .footer {
   position: fixed;
   bottom: 0;
-  background-color: #81d4fa;
+  width: 100%;
+  background-color: #fff9c4;
   padding: 20px;
+}
+.footer.shorten {
+  width: calc(100% - 230px);
 }
 .side-bar {
   height: 100%;
-  width: auto;
+  width: 230px;
   position: fixed;
   overflow-y: auto;
   padding: 15px 0;
@@ -164,10 +168,11 @@ iframe {
 }
 .content {
   padding: 35px;
+  line-height: 1.5em;
 }
 .hidden {
   display: none;
 }
 .padding-left {
-  padding-left: 200px;
+  padding-left: 230px;
 }
