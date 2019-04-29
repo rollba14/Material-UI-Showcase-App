@@ -18,6 +18,8 @@ class Sidebar extends Component{
   }
 
   render(){
+    let iconName = 'Widgets';
+    let DynamicIcon = Icons[iconName];
     return(
       <div
         className={this.props.openSideBar ? "side-bar":'side-bar hidden'}
@@ -41,7 +43,7 @@ class Sidebar extends Component{
 
           <ListItem button component={Router.Link} to={'/components'} onClick={()=>{this.toggleComp()}}>
             <ListItemIcon>
-              <Icons.Widgets/>
+              <DynamicIcon/>
             </ListItemIcon>
             <ListItemText primary="Components"/>
             {this.state.open ? <Icons.ExpandLess /> : <Icons.ExpandMore />}
