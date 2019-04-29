@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
+import Footer from '../components/Footer';
 import {Grid, ClickAwayListener} from '../components';
 
 class App extends Component {
@@ -28,6 +29,8 @@ class App extends Component {
           <div className={this.state.openSideBar? 'padding-left':''}>
             <div className="content">
               main content here
+
+              <Footer/>
             </div>
           </div>
         </div>
