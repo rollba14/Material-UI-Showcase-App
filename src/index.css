@@ -142,6 +142,7 @@ iframe {
   width: 100%;
   background-color: #fff9c4;
   padding: 20px;
+  border-top: 1px solid #cecece;
 }
 .footer.shorten {
   width: calc(100% - 230px);

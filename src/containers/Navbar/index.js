@@ -6,7 +6,7 @@ import IconPopover from '../../components/IconPopover'
 
 const styles = {
   root: {
-    backgroundColor: '#26a69a',
+    backgroundColor: '#4db6ac',
     flexGrow: 1,
   },
   appbar: {
