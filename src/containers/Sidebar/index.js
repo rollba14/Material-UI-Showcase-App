@@ -30,9 +30,7 @@ class Sidebar extends Component{
         className={this.props.openSideBar ? "side-bar":'side-bar hidden'}
       >
         <List component="nav">
-          <div>
-            {navElements}
-          </div>
+          {navElements}
         </List>
       </div>
     )

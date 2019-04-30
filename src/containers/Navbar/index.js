@@ -6,7 +6,6 @@ import IconPopover from '../../components/IconPopover'
 
 class Navbar extends Component{
   render(){
-
     return(
       <div className='navbar-root'>
         <AppBar>

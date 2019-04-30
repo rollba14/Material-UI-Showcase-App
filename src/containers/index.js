@@ -22,9 +22,7 @@ class App extends Component {
       openSideBar: !this.state.openSideBar,
     })
   }
-
-
-
+  
   render(){
     return (
       <BrowserRouter>
@@ -38,8 +36,6 @@ class App extends Component {
                   <Route path='/colors' component={ColorsPage}/>
                   <Route path='/icons' component={IconPage}/>
                   <Route component={NotFoundPage}/>
-
-
                 </Switch>
               </div>
               <Footer/>
