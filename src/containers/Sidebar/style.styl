@@ -1,8 +1,9 @@
 sideBarPadding = 15px 0
 sideBarWidth = 230px
+navBarHeight = 64px
 
 .side-bar
-  height: 100%
+  height: "calc(100% - %s)" % navBarHeight
   width: sideBarWidth
   position: fixed
   overflow-y: auto

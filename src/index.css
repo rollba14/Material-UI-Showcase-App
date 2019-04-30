@@ -162,7 +162,7 @@ iframe {
   flex-grow: 1;
 }
 .side-bar {
-  height: 100%;
+  height: calc(100% - 64px);
   width: 230px;
   position: fixed;
   overflow-y: auto;
