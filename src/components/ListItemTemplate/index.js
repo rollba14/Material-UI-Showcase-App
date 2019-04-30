@@ -10,51 +10,55 @@ class ListItemTemplate extends Component{
 
   componentDidMount=()=>{
     if(this.props.subItems) {
-      let toggleThisSubItem = this.props.label + 'Open';
+      let displaySubItems = this.props.label + 'Open';
       this.setState({
-        [toggleThisSubItem]: false
+        [displaySubItems]: false
       })
     }
   }
 
   toggleSubItems=()=>{
-    if(this.props.subItems){
-      let toggleThisSubItem = this.props.label + 'Open';
-      this.setState({
-        [toggleThisSubItem]: !this.state[toggleThisSubItem]
-      })
-    }
+    let toggleThisSubItem = this.props.label + 'Open';
+    this.setState({
+      [toggleThisSubItem]: !this.state[toggleThisSubItem]
+    })
   }
 
   render(){
     const IconComp = Icons[this.props.icon];
-    // const triggerCollapse = this.props.subItems ? {onClick()=>{this.toggleSubItems()}} : ""
-    const renderExpandBtn = this.props.subItems ?
+    const listItems = this.props.subItems ?
+      // If it has subitem(s)
       (<div>
-        {this.state[`${this.props.label}Open`]?<Icons.ExpandLess /> : <Icons.ExpandMore />}
-      </div>) : "";
-    const subItems = this.props.subItems ? (
-      <div className="nested">
-        <Collapse in={this.state[`${this.props.label}Open`]} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            {this.props.subItems}
-          </List>
-        </Collapse>
-      </div>
-    ) : "";
-    return(
-      <div>
-        <ListItem button component={Router.Link} to={this.props.url}
-           onClick={()=>this.toggleSubItems()}
-        >
+        <Divider/>
+        <ListItem button onClick={()=>this.toggleSubItems()}>
           <ListItemIcon>
             <IconComp/>
           </ListItemIcon>
           <ListItemText primary={this.props.label}/>
-          {renderExpandBtn}
+          {this.state[`${this.props.label}Open`]?<Icons.ExpandLess /> : <Icons.ExpandMore />}
         </ListItem>
-        {subItems}
+        <div className="nested">
+          <Collapse in={this.state[`${this.props.label}Open`]} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              {this.props.subItems}
+            </List>
+          </Collapse>
+        </div>
+      </div>) :
+      // if it does not have subitem(s)
+      (<div>
         <Divider/>
+        <ListItem button component={Router.Link} to={this.props.url}>
+          <ListItemIcon>
+            <IconComp/>
+          </ListItemIcon>
+          <ListItemText primary={this.props.label}/>
+        </ListItem>
+      </div>)
+
+    return(
+      <div>
+        {listItems}
       </div>
     )
   }
