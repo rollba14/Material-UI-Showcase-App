@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './style.styl';
-import {AppBar, Tabs, Tab, Paper} from '../../';
+import {AppBar, Tabs, Tab, Paper} from '../';
 
 class ColorsPage extends Component{
   constructor(props){
