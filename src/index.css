@@ -156,6 +156,24 @@ iframe {
 .icon-page .icon {
   width: 50px;
   height: 50px;
+  color: #5c7b98;
+}
+#dialog-box-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 30px;
+}
+#dialog-box-title svg {
+  height: auto;
+  width: 1.2em;
+  margin-left: 0.6em;
+}
+.dialog-content {
+  padding: 20px;
+  text-align: center;
 }
 .navbar-root {
   background-color: #4db6ac;

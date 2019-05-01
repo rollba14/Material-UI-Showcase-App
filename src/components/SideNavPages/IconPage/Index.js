@@ -1,21 +1,63 @@
 import React, {Component}from 'react';
 import './style.styl';
-import {AppBar,Icons} from '../../';
+import {AppBar,Icons, Button, Dialog, DialogTitle} from '../../';
 
 class IconPage extends Component{
-  render(){
-    let iconEle=[]
-    for(var key in Icons){
-      let Icon = Icons[key];
-      let IconEle = (<span key={key}><Icon className="icon"/></span>);
-      iconEle.push(IconEle);
+  constructor(props){
+    super(props)
+    this.state = {
+      selected: null,
     }
+  }
+
+  handleClose=()=>{
+    this.setState({
+      selected: null,
+    })
+  }
+
+  onSelect=(key)=>{
+    this.setState({
+      selected: key,
+    })
+  }
+
+  renderDialog=()=>{
+    const {selected} = this.state;
+    if(!selected) return;
+    const Icon = Icons[selected];
+    return (<Dialog onClose={this.handleClose} aria-labelledby="dialog-box"
+      open={!!selected}
+    >
+      <div id="dialog-box-title">
+        <div>Sample Usage for Icon {selected}</div>
+        <Icon/>
+      </div>
+      <div className="dialog-content">
+        (Icon usage displayed in markdown)
+      </div>
+    </Dialog>)
+  }
+
+  buildIconComps=()=>{
+    let iconEles=[];
+    let Icon = null;
+    let IconEle = null;
+    for(var key in Icons){
+      Icon = Icons[key];
+      IconEle = (<Button key={'icon-'+key} onClick={this.onSelect.bind(this,key)}><Icon className="icon"/></Button>);
+      iconEles.push(IconEle);
+    }
+    return iconEles;
+  }
+
+  render(){
     return(
       <div className="icon-page">
-        {iconEle}
+        {this.buildIconComps()}
+        {this.renderDialog()}
       </div>
     )
-
   }
 }
 
