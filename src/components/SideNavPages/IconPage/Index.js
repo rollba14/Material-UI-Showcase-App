@@ -1,14 +1,22 @@
-import React from 'react';
+import React, {Component}from 'react';
 import './style.styl';
-import {AppBar} from '../../';
+import {AppBar,Icons} from '../../';
 
-function IconPage(props){
-  return(
-    <div className="icon-page">
-      This is the icon page.
-    </div>
-  )
+class IconPage extends Component{
+  render(){
+    let iconEle=[]
+    for(var key in Icons){
+      let Icon = Icons[key];
+      let IconEle = (<span key={key}><Icon className="icon"/></span>);
+      iconEle.push(IconEle);
+    }
+    return(
+      <div className="icon-page">
+        {iconEle}
+      </div>
+    )
 
+  }
 }
 
 export default IconPage;
