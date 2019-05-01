@@ -7,7 +7,6 @@ function ColorsPage(props){
   return(
     <div className="color-page">
       This is the color page.
-      <TabsTemplate/>
     </div>
   )
 

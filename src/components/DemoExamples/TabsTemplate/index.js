@@ -6,7 +6,8 @@ class ColorsPage extends Component{
   constructor(props){
     super(props)
     this.state={
-      selectedTab: 1
+      selectedTab: 1,
+      label: this.props.label || "No Label"
     }
   }
 
@@ -26,14 +27,12 @@ class ColorsPage extends Component{
             indicatorColor="primary"
             textColor="primary"
             >
-              <Tab label="Item One" />
-              <Tab label="Item Two" />
-              <Tab label="Item Three" />
+              <Tab label={this.state.label} />
+              <Tab label="Sample Usage" />
             </Tabs>
           </AppBar>
           {value === 0 && <div>1</div>}
           {value === 1 && <div>2</div>}
-          {value === 2 && <div>3</div>}
         </Paper>
       </div>
     )
