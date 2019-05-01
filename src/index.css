@@ -136,6 +136,9 @@ iframe {
 #root.no-margin-left {
   margin-left: 0;
 }
+.example-template .app-bar {
+  background-color: #fff;
+}
 .footer {
   position: fixed;
   bottom: 0;
