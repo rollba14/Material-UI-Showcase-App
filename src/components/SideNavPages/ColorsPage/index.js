@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.styl';
 import {AppBar} from '../../';
-import TabsTemplate from '../../DemoExamples/TabsTemplate'
 
 function ColorsPage(props){
   return(
