@@ -26,7 +26,7 @@ class App extends Component {
 
   render(){
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={"/Material-UI-Showcase-App"}>
         <div className="App">
           <Navbar toggleSidebar={this.toggleSidebar}/>
           <Sidebar openSideBar={this.state.openSideBar}/>
