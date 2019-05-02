@@ -5,6 +5,7 @@ import NotFoundPage from '../components/NotFoundPage';
 import ColorsPage from '../components/SideNavPages/ColorsPage';
 import HomePage from '../components/SideNavPages/HomePage';
 import IconPage from '../components/SideNavPages/IconPage';
+import BarPage from '../components/SideNavPages/Charts/Bar';
 import Footer from '../components/Footer';
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import {Grid, ClickAwayListener} from '../components';
@@ -22,7 +23,7 @@ class App extends Component {
       openSideBar: !this.state.openSideBar,
     })
   }
-  
+
   render(){
     return (
       <BrowserRouter>
@@ -35,6 +36,7 @@ class App extends Component {
                   <Route exact path='/' component={HomePage}/>
                   <Route path='/colors' component={ColorsPage}/>
                   <Route path='/icons' component={IconPage}/>
+                  <Route path='/charts/bar' component={BarPage}/>
                   <Route component={NotFoundPage}/>
                 </Switch>
               </div>

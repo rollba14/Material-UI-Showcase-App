@@ -136,9 +136,6 @@ iframe {
 #root.no-margin-left {
   margin-left: 0;
 }
-.example-template .app-bar {
-  background-color: #fff;
-}
 .footer {
   position: fixed;
   bottom: 0;
@@ -174,6 +171,9 @@ iframe {
 .dialog-content {
   padding: 20px;
   text-align: center;
+}
+.example-template .app-bar {
+  background-color: #fff;
 }
 .navbar-root {
   background-color: #4db6ac;
