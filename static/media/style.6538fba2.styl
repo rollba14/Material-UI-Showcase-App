@@ -1,0 +1,13 @@
+sideBarPadding = 15px 0
+sideBarWidth = 230px
+navBarHeight = 64px
+
+.side-bar
+  height: "calc(100% - %s)" % navBarHeight
+  width: sideBarWidth
+  position: fixed
+  overflow-y: auto
+  padding: sideBarPadding
+  border-right: 1px solid #cecece
+  .nested
+    padding-left: 15px
