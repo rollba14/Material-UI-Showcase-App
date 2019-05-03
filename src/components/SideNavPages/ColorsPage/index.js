@@ -5,7 +5,8 @@ import {AppBar} from '../../';
 function ColorsPage(props){
   return(
     <div className="color-page">
-      This is the color page.
+      <h1>Colormind.io</h1>
+      <iframe src="http://colormind.io/"> </iframe>
     </div>
   )
 
