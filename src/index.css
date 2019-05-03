@@ -176,6 +176,10 @@ iframe {
   padding: 20px;
   text-align: center;
 }
+.paper {
+  padding: 20px 20px;
+  text-align: left;
+}
 .example-template .app-bar {
   background-color: #fff;
 }
