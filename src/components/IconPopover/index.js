@@ -1,13 +1,6 @@
 import React, {Component} from 'react';
 import './style.styl';
-import PropTypes from 'prop-types';
-import {AppBar, Toolbar, Icons, Menu, MenuItem, IconButton, Button, withStyles, Typography, List, ListItem} from '../';
-
-const styles = theme => ({
-  typography: {
-    margin: theme.spacing.unit * 2,
-  },
-});
+import {AppBar, Toolbar, Icons, Menu, MenuItem, IconButton, Button, Typography, List, ListItem} from '../';
 
 class IconPopover extends Component{
   constructor(props){
@@ -62,8 +55,4 @@ class IconPopover extends Component{
   }
 }
 
-IconPopover.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(IconPopover);
+export default IconPopover;
