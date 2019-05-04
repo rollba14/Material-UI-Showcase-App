@@ -5,7 +5,7 @@ import NotFoundPage from '../components/NotFoundPage';
 import ColorsPage from '../components/SideNavPages/ColorsPage';
 import HomePage from '../components/SideNavPages/HomePage';
 import IconPage from '../components/SideNavPages/IconPage';
-import BarPage from '../components/SideNavPages/Charts/Bar';
+import {ChartsPages} from '../components';
 import ButtonPage from '../components/SideNavPages/Components/ButtonPage'
 import Footer from '../components/Footer';
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
@@ -38,7 +38,7 @@ class App extends Component {
                   <Route path='/colors' component={ColorsPage}/>
                   <Route path='/icons' component={IconPage}/>
                   <Route path='/components/button' component={ButtonPage}/>
-                  <Route path='/charts/bar' component={BarPage}/>
+                  <Route path='/charts/bar' component={ChartsPages.Bar}/>
                   <Route component={NotFoundPage}/>
                 </Switch>
               </div>
