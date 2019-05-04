@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './style.styl';
 import PropTypes from 'prop-types';
-import {AppBar, Toolbar, Icons, IconButton, Button, withStyles, Typography} from '../../components';
+import {AppBar, Router, Toolbar, Icons, IconButton, Button, withStyles, Typography} from '../../components';
 import IconPopover from '../../components/IconPopover'
 
 class Navbar extends Component{
@@ -13,8 +13,8 @@ class Navbar extends Component{
             <Button onClick={()=>{this.props.toggleSidebar()}}>
               <Icons.Menu/>
             </Button>
-            <Typography className='grow'>
-              MUI - Showcase
+            <Typography className='grow typography'>
+              <Router.Link to='/'>MUI - SHOWCASE</Router.Link>
             </Typography>
             <IconPopover/>
           </Toolbar>

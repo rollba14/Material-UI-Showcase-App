@@ -140,7 +140,8 @@ iframe {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #fff59d;
+  background-color: #4db6ac;
+  color: #fff;
   padding: 20px;
   border-top: 1px solid #cecece;
 }
@@ -193,6 +194,16 @@ iframe {
 }
 .navbar-root .grow {
   flex-grow: 1;
+}
+.navbar-root .typography {
+  color: #fff;
+  font-weight: bold;
+}
+.navbar-root .typography a {
+  color: inherit !important;
+}
+.navbar-root svg {
+  color: #fff;
 }
 .side-bar {
   height: calc(100% - 64px);
