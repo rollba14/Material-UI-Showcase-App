@@ -249,3 +249,8 @@ iframe {
 .margin-left {
   margin-left: 230px;
 }
+@media screen and (max-width: 568px) {
+  .content {
+    padding: 0;
+  }
+}
