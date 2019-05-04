@@ -148,6 +148,9 @@ iframe {
 .margin-left .footer {
   width: calc(100% - 230px);
 }
+#icon-popper a {
+  color: #000;
+}
 .not-found-page {
   text-align: center;
 }
