@@ -10,7 +10,7 @@ function HomePage(props){
           <h1>Hi! Welcome to my Material UI Showcase App!</h1>
           <br/>
           <p>
-            This is an app about all the modules and components I can build with 3rd party library Material UI, to create an elegant, easy-to-use web user interface (UI) while keeping the UI responsive and compatible for different browsers and devices.
+            This is an app about all the modules and components I can build with 3rd party library Material UI, to create an elegant, easy-to-use web user interface (UI) while keeping the UI responsive and compatible with different browsers and devices.
           </p>
           <br/>
           <p>
