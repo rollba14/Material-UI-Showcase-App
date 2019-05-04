@@ -187,6 +187,13 @@ iframe {
 .example-template .app-bar {
   background-color: #fff;
 }
+.example-template .example-body {
+  text-align: left;
+  padding: 15px;
+}
+.example-template .tab {
+  padding: 15px;
+}
 .navbar-root {
   background-color: #4db6ac;
   flex-grow: 1;

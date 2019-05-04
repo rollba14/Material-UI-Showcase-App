@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './style.styl';
 import {AppBar, Tabs, Tab, Paper} from '../';
 
-class ColorsPage extends Component{
+class TabsTemplate extends Component{
   constructor(props){
     super(props)
     this.state={
@@ -27,16 +27,18 @@ class ColorsPage extends Component{
             indicatorColor="primary"
             textColor="primary"
             >
-              <Tab label={this.state.label} />
-              <Tab label="Sample Usage" />
+              <Tab label={this.state['label'].toUpperCase() + " DEMO"} className="tab"/>
+              <Tab label="Sample Usage" className="tab"/>
             </Tabs>
           </AppBar>
-          {value === 0 && <div>1</div>}
-          {value === 1 && <div>2</div>}
+          <div className="example-body">
+            {value === 0 && <div>{this.state['content'] || "Sorry there's no demo yet"}</div>}
+            {value === 1 && <div>Markdown content goes here</div>}
+          </div>
         </Paper>
       </div>
     )
   }
 }
 
-export default ColorsPage;
+export default TabsTemplate;
