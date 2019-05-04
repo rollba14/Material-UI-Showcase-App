@@ -1,15 +1,8 @@
 import React, {Component} from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
-import NotFoundPage from '../components/NotFoundPage';
-import ColorsPage from '../components/SideNavPages/ColorsPage';
-import HomePage from '../components/SideNavPages/HomePage';
-import IconPage from '../components/SideNavPages/IconPage';
-import {ChartsPages} from '../components';
-import ButtonPage from '../components/SideNavPages/Components/ButtonPage'
-import Footer from '../components/Footer';
+import {NotFoundPage, ColorsPage, HomePage, IconPage, ChartsPages, ComponentsPages, Footer} from '../components';
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
-import {Grid, ClickAwayListener} from '../components';
 
 class App extends Component {
   constructor(props){
@@ -37,7 +30,7 @@ class App extends Component {
                   <Route exact path='/' component={HomePage}/>
                   <Route path='/colors' component={ColorsPage}/>
                   <Route path='/icons' component={IconPage}/>
-                  <Route path='/components/button' component={ButtonPage}/>
+                  <Route path='/components/button' component={ComponentsPages.ButtonPage}/>
                   <Route path='/charts/bar' component={ChartsPages.Bar}/>
                   <Route component={NotFoundPage}/>
                 </Switch>
