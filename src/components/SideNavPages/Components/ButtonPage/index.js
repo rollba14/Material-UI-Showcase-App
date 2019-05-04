@@ -5,7 +5,7 @@ import TabsTemplate from '../../../TabsTemplate'
 
 function ButtonPage(props){
   return(
-    <div className='button-ex'>
+    <div>
       <TabsTemplate label="button"/>
     </div>
   )
