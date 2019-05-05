@@ -158,6 +158,19 @@ iframe {
   width: 100%;
   height: -webkit-fill-available;
 }
+.example-template .demo-body {
+  padding: 10px 2px;
+}
+.example-template .demo-title {
+  color: #5c7b98;
+}
+.example-template .demo-content {
+  padding: 10px;
+  border: 1px solid #bababa;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 .icon-page .icon {
   width: 50px;
   height: 50px;
