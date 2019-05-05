@@ -171,6 +171,9 @@ iframe {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.demo-progress > div {
+  margin: 50px 10px;
+}
 .demo-table {
   overflow-x: scroll;
 }
