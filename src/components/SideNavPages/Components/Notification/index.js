@@ -27,7 +27,7 @@ class NotificationPage extends Component{
 
   render(){
     const content = (<div className="demo-notification-wrapper">
-      <Button color="primary" variant="contained" onClick={this.handleOpen}>
+      <Button color="primary" className="ft-weight-bold" variant="outlined" onClick={this.handleOpen}>
         Trigger a notification
       </Button>
       <Snackbar

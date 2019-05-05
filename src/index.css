@@ -196,10 +196,10 @@ iframe {
   background-color: #1876d2 !important;
 }
 #demo-notification {
-  width: 350px;
+  width: auto;
 }
 #demo-notification > div {
-  background-color: #303f9e;
+  background-color: #2095f2;
   color: #fff;
   font-weight: bold;
 }
@@ -209,6 +209,11 @@ iframe {
 .demo-notification-wrapper {
   margin: auto;
   text-align: center;
+}
+.demo-notification-wrapper button {
+  font-weight: bold;
+  color: #2095f2;
+  border-color: #2095f2;
 }
 .demo-progress > div {
   margin: 50px 10px;
