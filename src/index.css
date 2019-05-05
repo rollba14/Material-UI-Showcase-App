@@ -171,6 +171,30 @@ iframe {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.messageBar {
+  padding: 15px 10px;
+  max-width: 350px;
+  margin: auto;
+}
+.messageBar span {
+  display: flex;
+  align-items: center;
+}
+.messageBar span .message {
+  margin-left: 10px;
+}
+.success-message {
+  background-color: #43a047 !important;
+}
+.warning-message {
+  background-color: #fca000 !important;
+}
+.error-message {
+  background-color: #d32f2e !important;
+}
+.info-message {
+  background-color: #1876d2 !important;
+}
 .demo-progress > div {
   margin: 50px 10px;
 }
