@@ -8,8 +8,8 @@ import ProgressPage from './Progress'
 import SpinnerPage from './Spinner'
 import TablePage from './Table'
 import TabsPage from './Tabs'
-import TreeTable from './TreeTable'
+import TreeTablePage from './TreeTable'
 
 export {
-  AvatarPage, ButtonPage, DialogPage, MarkdownPage, MessageBarPage, NotificationPage, ProgressPage, SpinnerPage, TablePage, TabsPage, TreeTable
+  AvatarPage, ButtonPage, DialogPage, MarkdownPage, MessageBarPage, NotificationPage, ProgressPage, SpinnerPage, TablePage, TabsPage, TreeTablePage
 };

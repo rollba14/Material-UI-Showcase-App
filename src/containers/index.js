@@ -31,6 +31,16 @@ class App extends Component {
                   <Route path='/colors' component={ColorsPage}/>
                   <Route path='/icons' component={IconPage}/>
                   <Route path='/components/button' component={ComponentsPages.ButtonPage}/>
+                  <Route path='/components/table' component={ComponentsPages.TablePage}/>
+                  <Route path='/components/treeTable' component={ComponentsPages.TreeTablePage}/>
+                  <Route path='/components/tabs' component={ComponentsPages.TabsPage}/>
+                  <Route path='/components/spinner' component={ComponentsPages.SpinnerPage}/>
+                  <Route path='/components/progress' component={ComponentsPages.ProgressPage}/>
+                  <Route path='/components/messageBar' component={ComponentsPages.MessageBarPage}/>
+                  <Route path='/components/notification' component={ComponentsPages.NotificationPage}/>
+                  <Route path='/components/dialog' component={ComponentsPages.DialogPage}/>
+                  <Route path='/components/avatar' component={ComponentsPages.AvatarPage}/>
+                  <Route path='/components/markdown' component={ComponentsPages.MarkdownPage}/>
                   <Route path='/charts/bar' component={ChartsPages.Bar}/>
                   <Route component={NotFoundPage}/>
                 </Switch>
