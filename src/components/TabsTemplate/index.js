@@ -33,7 +33,7 @@ class TabsTemplate extends Component{
           </AppBar>
           <div className="example-body">
             {value === 0 && <div>{this.props['content'] || "Sorry there's no demo yet"}</div>}
-            {value === 1 && <div>Markdown content goes here</div>}
+            {value === 1 && <div>{this.props['markdown'] || "Markdown content goes here"}</div>}
           </div>
         </Paper>
       </div>
