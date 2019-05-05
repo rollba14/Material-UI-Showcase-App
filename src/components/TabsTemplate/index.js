@@ -6,7 +6,7 @@ class TabsTemplate extends Component{
   constructor(props){
     super(props)
     this.state={
-      selectedTab: 1,
+      selectedTab: 0,
       label: this.props.label || "No Label"
     }
   }
@@ -32,7 +32,7 @@ class TabsTemplate extends Component{
             </Tabs>
           </AppBar>
           <div className="example-body">
-            {value === 0 && <div>{this.state['content'] || "Sorry there's no demo yet"}</div>}
+            {value === 0 && <div>{this.props['content'] || "Sorry there's no demo yet"}</div>}
             {value === 1 && <div>Markdown content goes here</div>}
           </div>
         </Paper>
