@@ -158,6 +158,25 @@ iframe {
   width: 100%;
   height: -webkit-fill-available;
 }
+.folder-avatar {
+  background-color: #4ac8eb !important;
+}
+.pageview-avatar {
+  background-color: #e91d63 !important;
+}
+.assignment-avatar {
+  background-color: #4caf50 !important;
+}
+.bg-light-gray {
+  background-color: #eee !important;
+}
+.demo-avatar > div {
+  padding: 10px 20px;
+}
+.demo-avatar > div h4 {
+  color: #4b7aa8;
+  padding-bottom: 10px;
+}
 .example-template .demo-body {
   padding: 10px 2px;
 }
