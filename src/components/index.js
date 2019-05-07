@@ -11,9 +11,11 @@ import HomePage from './SideNavPages/HomePage'
 import ColorsPage from './SideNavPages/ColorsPage'
 import * as ComponentsPages from './SideNavPages/Components'
 import * as ChartsPages from './SideNavPages/Charts'
+import CodeBlock from './CodeBlock';
+import ReactMarkdown from 'react-markdown'
 
 
 
 // export all components, Icons, Charts
 export * from '@material-ui/core/';
-export { Icons, Charts, Router, Footer, IconPopover, ListItemTemplate, NotFoundPage, TabsTemplate, IconPage, HomePage, ColorsPage, ComponentsPages, ChartsPages};
+export { Icons, Charts, Router, Footer, IconPopover, ListItemTemplate, NotFoundPage, TabsTemplate, IconPage, HomePage, ColorsPage, ComponentsPages, ChartsPages, CodeBlock, ReactMarkdown};
