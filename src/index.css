@@ -254,6 +254,15 @@ iframe {
 .demo-progress > div {
   margin: 50px 10px;
 }
+.demo-spinner .example-body > div {
+  height: 100%;
+}
+.demo-spinner .example-body > div > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 .demo-table {
   overflow-x: scroll;
 }

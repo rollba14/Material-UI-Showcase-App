@@ -4,7 +4,7 @@ import {CircularProgress} from '../../../';
 import TabsTemplate from '../../../TabsTemplate'
 
 function createContent(props){
-  return (<div className="flex-around-center-wrap">
+  return (<div>
     <CircularProgress color="primary"/>
     <CircularProgress color="secondary" size={50} thickness={4}/>
     <CircularProgress color="primary" size={60} thickness={4.4}/>
@@ -14,7 +14,7 @@ function createContent(props){
 
 function SpinnerPage(props){
   return(
-    <div>
+    <div className="demo-spinner">
       <TabsTemplate label="Spinner" content={createContent()}/>
     </div>
   )
