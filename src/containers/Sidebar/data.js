@@ -107,7 +107,7 @@ const navItems = [
           icon: 'NavigateNext'
         },
         {
-          label: 'scatterplot',
+          label: 'Scatterplot',
           url: BASE_URL + 'charts/scatterplot',
           icon: 'NavigateNext'
         }
