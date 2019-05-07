@@ -329,6 +329,7 @@ iframe {
 pre {
   background-color: #f2f6fa !important;
   padding: 15px !important;
+  overflow: auto !important;
 }
 .example-template,
 .example-template > div:first-child {
