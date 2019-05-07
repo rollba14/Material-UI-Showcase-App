@@ -326,6 +326,10 @@ iframe {
   justify-content: center;
   align-items: center;
 }
+pre {
+  background-color: #f2f6fa !important;
+  padding: 15px !important;
+}
 .example-template,
 .example-template > div:first-child {
   height: 100%;
