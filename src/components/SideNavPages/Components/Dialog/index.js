@@ -1,14 +1,29 @@
 import React, {Component} from 'react';
 import './style.styl';
-import {Dialog, Typography, Icons, Button, IconButton, Divider} from '../../../';
+import {Dialog, Typography, Icons, Button, IconButton, Divider, CodeBlock, ReactMarkdown} from '../../../';
 import TabsTemplate from '../../../TabsTemplate'
+import markdownFile from './markdown.md'
 
 class DialogPage extends Component{
   constructor(props){
     super(props)
     this.state={
-      open:false
+      open:false,
+      code: null
     }
+  }
+
+  componentWillMount() {
+    fetch(markdownFile).then((response) => response.text()).then((text) => {
+      this.setState({ code: text })
+    })
+  }
+
+  buildMarkdown=()=>{
+    return(<ReactMarkdown
+      source={this.state.code}
+      renderers={{code:CodeBlock}}
+    />)
   }
 
   handleClose=()=>{
@@ -53,7 +68,10 @@ class DialogPage extends Component{
 
     return(
       <div>
-        <TabsTemplate label="Dialog" content={content}/>
+        <TabsTemplate label="Dialog"
+          content={content}
+          markdown={this.buildMarkdown()}
+        />
       </div>
     )
   }
