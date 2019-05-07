@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './style.styl';
 import {Charts} from '../../../';
+import TabsTemplate from '../../../TabsTemplate';
 
 class Line extends Component{
   render(){
@@ -14,6 +15,7 @@ class Line extends Component{
       VerticalGridLines,
       HorizontalGridLines
     } = Charts;
+
     const data = [
       {x: 0, y: 8},
       {x: 1, y: 5},
@@ -27,10 +29,10 @@ class Line extends Component{
       {x: 9, y: 0}
     ];
 
-    return(
+    const content = (
       <div className="line-demo">
       <XYPlot
-        height={500} width={500}
+        height={400} width={500}
         xDomain={[0,10]}
         yDomain={[0,10]}
       >
@@ -40,6 +42,12 @@ class Line extends Component{
         <YAxis title="Y"/>
         <LineSeries data={data}/>
       </XYPlot>
+      </div>
+    )
+
+    return(
+      <div className="demo-charts">
+        <TabsTemplate label="Line Chart" content={content}/>
       </div>
     )
   }

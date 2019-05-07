@@ -16,23 +16,29 @@ class Bar extends Component{
       VerticalGridLines,
       HorizontalGridLines
     } = Charts;
-    return(
+
+    const content = (
       <div className='bar-demo'>
-        <XYPlot
-          width={400}
-          height={400}
-          xDomain={[0,20]}
-          yDomain={[0,8]}
-        >
-          <VerticalGridLines />
-          <HorizontalGridLines/>
-          <XAxis />
-          <YAxis />
-          <HorizontalBarSeries
-            data={MyData}
-            style={{}}
-          />
-        </XYPlot>
+            <XYPlot
+              width={500}
+              height={400}
+              xDomain={[0,20]}
+              yDomain={[0,8]}
+            >
+              <VerticalGridLines />
+              <HorizontalGridLines/>
+              <XAxis />
+              <YAxis />
+              <HorizontalBarSeries
+                data={MyData}
+                style={{}}
+              />
+            </XYPlot>
+          </div>)
+
+    return(
+      <div className="demo-charts">
+        <TabsTemplate label="Bar Chart" content={content}/>
       </div>
     )
   }
