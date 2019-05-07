@@ -251,8 +251,18 @@ iframe {
   color: #2095f2;
   border-color: #2095f2;
 }
-.demo-progress > div {
-  margin: 50px 10px;
+.demo-progress .example-body > div {
+  height: 100%;
+}
+.demo-progress .example-body > div > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.demo-progress .example-body > div > div > div {
+  width: 100%;
 }
 .demo-spinner .example-body > div {
   height: 100%;

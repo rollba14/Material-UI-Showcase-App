@@ -4,7 +4,7 @@ import {LinearProgress} from '../../../';
 import TabsTemplate from '../../../TabsTemplate'
 
 function createContent(props){
-  return (<div className="demo-progress">
+  return (<div>
     <LinearProgress color="primary"/>
     <LinearProgress color="secondary" variant="query"/>
   </div>)
@@ -12,7 +12,7 @@ function createContent(props){
 
 function ProgressPage(props){
   return(
-    <div>
+    <div className="demo-progress">
       <TabsTemplate label="Progress" content={createContent()}/>
     </div>
   )
