@@ -42,7 +42,11 @@ class App extends Component {
                   <Route path='/components/avatar' component={ComponentsPages.AvatarPage}/>
                   <Route path='/components/markdown' component={ComponentsPages.MarkdownPage}/>
                   <Route path='/charts/bar' component={ChartsPages.Bar}/>
+                  <Route path='/charts/stackbar' component={ChartsPages.StackedBar}/>
+                  <Route path='/charts/area' component={ChartsPages.Area}/>
                   <Route path='/charts/line' component={ChartsPages.Line}/>
+                  <Route path='/charts/pie' component={ChartsPages.Pie}/>
+                  <Route path='/charts/scatterplot' component={ChartsPages.Scatterplot}/>
                   <Route component={NotFoundPage}/>
                 </Switch>
               </div>
