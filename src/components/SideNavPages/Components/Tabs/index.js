@@ -31,7 +31,7 @@ class TabsPage extends Component{
               <Tab label="Tab 2" className="tab"/>
             </Tabs>
           </AppBar>
-          <div className="example-body">
+          <div>
             {value === 0 && <div>Content 1</div>}
             {value === 1 && <div>Content 2</div>}
           </div>

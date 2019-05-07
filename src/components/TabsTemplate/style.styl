@@ -1,8 +1,13 @@
+tabsHeight = 58px
+
 .example-template
+  &, & > div:first-child
+    height: 100%
   .app-bar
     background-color: white
   .example-body
     text-align: left
     padding: 15px
+    height: "calc(100% - %s)" % tabsHeight !important
   .tab
     padding: 15px

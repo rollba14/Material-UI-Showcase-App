@@ -295,12 +295,17 @@ iframe {
   flex-wrap: wrap;
   align-items: center;
 }
+.example-template,
+.example-template > div:first-child {
+  height: 100%;
+}
 .example-template .app-bar {
   background-color: #fff;
 }
 .example-template .example-body {
   text-align: left;
   padding: 15px;
+  height: calc(100% - 58px) !important;
 }
 .example-template .tab {
   padding: 15px;
@@ -353,10 +358,15 @@ iframe {
   padding: 25px 35px 57px 35px;
   line-height: 1.5em;
   width: 100%;
+  height: 100%;
+}
+.content > div:first-child {
+  height: 100%;
 }
 .main {
   text-align: center;
   width: 100vw;
+  height: 100%;
 }
 .main.margin-left {
   width: calc(100vw - 230px);

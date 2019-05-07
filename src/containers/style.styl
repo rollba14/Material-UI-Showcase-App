@@ -19,12 +19,19 @@ mainDivWidth = 100vw - sideBarWidth
   padding: contentPadding
   line-height: 1.5em;
   width: 100%;
+  height: 100%;
+  & > div:first-child
+    height: 100%
+
 
 .main
   text-align: center;
-  width: 100vw;
+  width: 100vw
+  height: 100%
   &.margin-left
     width: "calc(100vw - %s)" % sideBarWidth
+
+
 
 .hidden
   display: none;
