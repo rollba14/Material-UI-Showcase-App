@@ -305,7 +305,9 @@ iframe {
 .example-template .example-body {
   text-align: left;
   padding: 15px;
-  height: calc(100% - 58px) !important;
+  max-height: calc(100% - 58px) !important;
+  overflow: auto;
+  height: 100%;
 }
 .example-template .tab {
   padding: 15px;
@@ -355,7 +357,7 @@ iframe {
   }
 }
 .content {
-  padding: 25px 35px 57px 35px;
+  padding: 15px 35px 67px 35px;
   line-height: 1.5em;
   width: 100%;
   height: 100%;

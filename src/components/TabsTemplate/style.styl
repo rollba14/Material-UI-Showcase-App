@@ -8,6 +8,8 @@ tabsHeight = 58px
   .example-body
     text-align: left
     padding: 15px
-    height: "calc(100% - %s)" % tabsHeight !important
+    max-height: "calc(100% - %s)" % tabsHeight !important
+    overflow: auto;
+    height: 100%
   .tab
     padding: 15px
