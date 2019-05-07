@@ -39,7 +39,7 @@ class TabsPage extends Component{
       </div>
     )
     return(
-      <div>
+      <div className="demo-tabs">
         <TabsTemplate label="Tabs" content={content}/>
       </div>
     )
