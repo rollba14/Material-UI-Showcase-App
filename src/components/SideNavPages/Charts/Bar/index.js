@@ -18,7 +18,7 @@ class Bar extends Component{
     } = Charts;
 
     const content = (
-      <div className='bar-demo'>
+      <div className='demo-bar'>
             <XYPlot
               width={500}
               height={400}

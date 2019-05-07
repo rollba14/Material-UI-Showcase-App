@@ -16,7 +16,7 @@ class StackedBar extends Component{
     } = Charts;
 
     const content = (
-      <div className='stackedbar-demo'>
+      <div className='demo-stackedbar'>
             <XYPlot
               width={500}
               height={400}

@@ -30,7 +30,7 @@ class Line extends Component{
     ];
 
     const content = (
-      <div className="line-demo">
+      <div className="demo-line">
       <XYPlot
         height={400} width={500}
         xDomain={[0,10]}
