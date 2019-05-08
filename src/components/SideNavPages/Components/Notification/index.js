@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import './style.styl';
-import { Button, Snackbar, Icons, IconButton } from '../../../';
+import { Button, Snackbar, Icons, IconButton, CodeBlock, ReactMarkdown } from '../../../';
 import TabsTemplate from '../../../TabsTemplate'
+import markdownFile from './markdown.md'
 
 class NotificationPage extends Component{
   constructor(props){
@@ -9,6 +10,19 @@ class NotificationPage extends Component{
     this.state ={
       open: false
     }
+  }
+
+  componentWillMount() {
+    fetch(markdownFile).then((response) => response.text()).then((text) => {
+      this.setState({ code: text })
+    })
+  }
+
+  buildMarkdown=()=>{
+    return(<ReactMarkdown
+      source={this.state.code}
+      renderers={{code:CodeBlock}}
+    />)
   }
 
   handleOpen=()=>{
@@ -53,7 +67,10 @@ class NotificationPage extends Component{
 
     return(
       <div>
-        <TabsTemplate label="Notification" content={content}/>
+        <TabsTemplate label="Notification"
+          content={content}
+          markdown={this.buildMarkdown()}
+        />
       </div>
     )
   }
