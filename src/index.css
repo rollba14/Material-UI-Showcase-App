@@ -299,7 +299,7 @@ iframe {
   justify-content: center;
   font-size: 1.2em;
   font-weight: bold;
-  padding: 30px;
+  padding: 30px 30px 10px 30px;
 }
 #dialog-box-title svg {
   height: auto;
@@ -307,8 +307,12 @@ iframe {
   margin-left: 0.6em;
 }
 .dialog-content {
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   text-align: center;
+}
+.dialog-footer {
+  padding: 10px 20px 20px 20px;
+  text-align: right;
 }
 .paper {
   padding: 20px 20px;
