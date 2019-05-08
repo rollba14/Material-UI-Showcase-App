@@ -1,6 +1,6 @@
 import React, {Component}from 'react';
 import './style.styl';
-import {AppBar,Icons, Button, Dialog, DialogTitle} from '../../';
+import {AppBar,Icons, Button, Dialog, DialogTitle, CodeBlock, ReactMarkdown} from '../../';
 
 class IconPage extends Component{
   constructor(props){
@@ -22,6 +22,20 @@ class IconPage extends Component{
     })
   }
 
+  buildMarkdown=()=>{
+    const md = `
+    import * as Icons from '@material-ui/icons/';
+
+    const IconComponent = Icons[${this.state.selected}];
+
+    return <div><IconComponent /></div>;
+    `
+    return(<ReactMarkdown
+      source={md}
+      renderers={{code:CodeBlock}}
+    />)
+  }
+
   renderDialog=()=>{
     const {selected} = this.state;
     if(!selected) return;
@@ -34,7 +48,10 @@ class IconPage extends Component{
         <Icon/>
       </div>
       <div className="dialog-content">
-        (Icon usage displayed in markdown)
+        {this.buildMarkdown()}
+      </div>
+      <div className="dialog-footer">
+        <Button onClick={()=>{this.handleClose()}} color="primary" variant="outlined">Close</Button>
       </div>
     </Dialog>)
   }
