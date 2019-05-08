@@ -26,7 +26,7 @@ class IconPage extends Component{
     const md = `
     import * as Icons from '@material-ui/icons/';
 
-    const IconComponent = Icons[${this.state.selected}];
+    const IconComponent = Icons['${this.state.selected}'];
 
     return <div><IconComponent /></div>;
     `
