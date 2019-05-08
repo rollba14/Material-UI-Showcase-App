@@ -1,9 +1,27 @@
 import React, {Component} from 'react';
-import {Charts} from '../../../';
+import {Charts, CodeBlock, ReactMarkdown} from '../../../';
 import TabsTemplate from '../../../TabsTemplate'
 import importedData from './data.js'
+import markdownFile from './markdown.md'
 
 class StackedBar extends Component{
+  constructor(props) {
+    super(props)
+    this.state = { code: null }
+  }
+
+  componentWillMount() {
+    fetch(markdownFile).then((response) => response.text()).then((text) => {
+      this.setState({ code: text })
+    })
+  }
+
+  buildMarkdown=()=>{
+    return(<ReactMarkdown
+      source={this.state.code}
+      renderers={{code:CodeBlock}}
+    />)
+  }
 
   render(){
     const {
@@ -35,7 +53,10 @@ class StackedBar extends Component{
 
     return(
       <div className="demo-charts">
-        <TabsTemplate label="Area Chart" content={content}/>
+        <TabsTemplate label="Area Chart"
+          content={content}
+          markdown={this.buildMarkdown()}
+        />
       </div>
     )
   }

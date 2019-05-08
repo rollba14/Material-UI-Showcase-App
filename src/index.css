@@ -330,6 +330,8 @@ pre {
   background-color: #f2f6fa !important;
   padding: 15px !important;
   overflow: auto !important;
+  max-height: 100%;
+  width: 100%;
 }
 .example-template,
 .example-template > div:first-child {
