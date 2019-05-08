@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/Material-UI-Showcase-App/static/css/main.830c3e89.chunk.css",
-    "main.js": "/Material-UI-Showcase-App/static/js/main.57a98973.chunk.js",
-    "main.js.map": "/Material-UI-Showcase-App/static/js/main.57a98973.chunk.js.map",
+    "main.css": "/Material-UI-Showcase-App/static/css/main.2fe959c2.chunk.css",
+    "main.js": "/Material-UI-Showcase-App/static/js/main.4e153f71.chunk.js",
+    "main.js.map": "/Material-UI-Showcase-App/static/js/main.4e153f71.chunk.js.map",
     "runtime~main.js": "/Material-UI-Showcase-App/static/js/runtime~main.b446cf9f.js",
     "runtime~main.js.map": "/Material-UI-Showcase-App/static/js/runtime~main.b446cf9f.js.map",
-    "static/js/2.01f6807d.chunk.js": "/Material-UI-Showcase-App/static/js/2.01f6807d.chunk.js",
-    "static/js/2.01f6807d.chunk.js.map": "/Material-UI-Showcase-App/static/js/2.01f6807d.chunk.js.map",
+    "static/css/2.5a2f7233.chunk.css": "/Material-UI-Showcase-App/static/css/2.5a2f7233.chunk.css",
+    "static/js/2.b30eb53c.chunk.js": "/Material-UI-Showcase-App/static/js/2.b30eb53c.chunk.js",
+    "static/js/2.b30eb53c.chunk.js.map": "/Material-UI-Showcase-App/static/js/2.b30eb53c.chunk.js.map",
     "index.html": "/Material-UI-Showcase-App/index.html",
-    "precache-manifest.9f7f2bc0752d2712c74217f835326c9a.js": "/Material-UI-Showcase-App/precache-manifest.9f7f2bc0752d2712c74217f835326c9a.js",
+    "precache-manifest.6fbf79218ec396e5cbfc73089c526155.js": "/Material-UI-Showcase-App/precache-manifest.6fbf79218ec396e5cbfc73089c526155.js",
     "service-worker.js": "/Material-UI-Showcase-App/service-worker.js",
-    "static/css/main.830c3e89.chunk.css.map": "/Material-UI-Showcase-App/static/css/main.830c3e89.chunk.css.map",
-    "static/media/style.styl": "/Material-UI-Showcase-App/static/media/style.f591cdc7.styl"
+    "static/css/2.5a2f7233.chunk.css.map": "/Material-UI-Showcase-App/static/css/2.5a2f7233.chunk.css.map",
+    "static/css/main.2fe959c2.chunk.css.map": "/Material-UI-Showcase-App/static/css/main.2fe959c2.chunk.css.map",
+    "static/media/markdown.md": "/Material-UI-Showcase-App/static/media/markdown.f2364ce2.md",
+    "static/media/style.styl": "/Material-UI-Showcase-App/static/media/style.f97b275b.styl"
   }
 }
