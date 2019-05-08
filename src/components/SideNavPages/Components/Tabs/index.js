@@ -1,14 +1,29 @@
 import React, {Component} from 'react';
 import './style.styl';
-import {AppBar,Tabs,Tab, Paper} from '../../../';
+import {AppBar,Tabs,Tab, Paper, CodeBlock, ReactMarkdown} from '../../../';
 import TabsTemplate from '../../../TabsTemplate'
+import markdownFile from './markdown.md'
 
 class TabsPage extends Component{
   constructor(props){
     super(props)
     this.state={
-      selectedTab: 0
+      selectedTab: 0,
+      code: null
     }
+  }
+
+  componentWillMount() {
+    fetch(markdownFile).then((response) => response.text()).then((text) => {
+      this.setState({ code: text })
+    })
+  }
+
+  buildMarkdown=()=>{
+    return(<ReactMarkdown
+      source={this.state.code}
+      renderers={{code:CodeBlock}}
+    />)
   }
 
   handleTabChange=(event,value)=>{
@@ -40,7 +55,10 @@ class TabsPage extends Component{
     )
     return(
       <div className="demo-tabs">
-        <TabsTemplate label="Tabs" content={content}/>
+        <TabsTemplate label="Tabs"
+          content={content}
+          markdown={this.buildMarkdown()}
+        />
       </div>
     )
   }
