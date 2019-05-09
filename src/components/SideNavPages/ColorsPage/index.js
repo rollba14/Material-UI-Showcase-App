@@ -6,9 +6,9 @@ function ColorsPage(props){
   return(
     <div className="color-page">
       <Paper className="paper">
-        <h2>This page features an external website - Colormind.io using iframe</h2>
+        <h2>This page features an external website—Colorhunt.co using iframe</h2>
         <br/>
-        <iframe src="http://colormind.io/"> </iframe>
+        <iframe src="https://colorhunt.co/"> </iframe>
       </Paper>
     </div>
   )
