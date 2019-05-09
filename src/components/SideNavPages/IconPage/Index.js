@@ -62,7 +62,7 @@ class IconPage extends Component{
     let IconEle = null;
     for(var key in Icons){
       Icon = Icons[key];
-      IconEle = (<Button key={'icon-'+key} onClick={()=>this.onSelect(key)}><Icon className="icon"/></Button>);
+      IconEle = (<Button key={'icon-'+key} onClick={this.onSelect.bind(this,key)}><Icon className="icon"/></Button>);
       iconEles.push(IconEle);
     }
     return iconEles;
