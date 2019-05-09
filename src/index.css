@@ -351,6 +351,10 @@ pre {
   overflow: auto;
   height: 100%;
 }
+.example-template .example-body > .example-body-markdown {
+  height: 100%;
+  width: 100%;
+}
 .example-template .tab {
   padding: 15px;
 }
