@@ -5,7 +5,7 @@ import {AppBar} from '../';
 function NotFoundPage(props){
   return(
     <div className="not-found-page">
-        404! The page you are looking does not exist :(
+        <h1>404! The page you are looking for does not exist :(</h1>
     </div>
   )
 

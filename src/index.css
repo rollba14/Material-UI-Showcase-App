@@ -153,6 +153,8 @@ iframe {
 }
 .not-found-page {
   text-align: center;
+  margin: auto;
+  padding: 40px 40px;
 }
 iframe {
   width: 100%;
