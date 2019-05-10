@@ -7,12 +7,29 @@ import markdownFile from './markdown.md'
 class StackedBar extends Component{
   constructor(props) {
     super(props)
-    this.state = { code: null }
+    this.state = {
+      code: null,
+      dimensions: null
+    }
   }
 
   componentWillMount() {
     fetch(markdownFile).then((response) => response.text()).then((text) => {
       this.setState({ code: text })
+    })
+  }
+
+  componentDidMount=()=>{
+    window.addEventListener("resize", this.updateDimensions);
+    this.updateDimensions()
+  }
+
+  updateDimensions=()=>{
+    this.setState({
+      dimensions:{
+        width: this.container.clientWidth - 50,
+        height: this.container.clientHeight - 103
+      }
     })
   }
 
@@ -23,7 +40,8 @@ class StackedBar extends Component{
     />)
   }
 
-  render(){
+  renderContent=()=>{
+    const {dimensions} = this.state
     const {
       XYPlot,
       AreaSeries,
@@ -33,12 +51,11 @@ class StackedBar extends Component{
       VerticalGridLines,
       HorizontalGridLines
     } = Charts;
-
     const content = (
-      <div className='demo-area'>
+      <div ref={this.demoArea} className='demo-area'>
             <XYPlot
-              width={500}
-              height={400}
+              width={dimensions.width}
+              height={dimensions.height}
             >
               <VerticalGridLines />
               <HorizontalGridLines/>
@@ -51,12 +68,19 @@ class StackedBar extends Component{
             </XYPlot>
       </div>)
 
+    return (<TabsTemplate label="Area Chart"
+      content={content}
+      markdown={this.buildMarkdown()}
+    />)
+  }
+
+  render(){
+    const {dimensions} = this.state
     return(
-      <div className="demo-charts">
-        <TabsTemplate label="Area Chart"
-          content={content}
-          markdown={this.buildMarkdown()}
-        />
+      <div className="demo-charts" ref={div=>{this.container = div}}>
+        {  dimensions &&
+           this.renderContent()
+        }
       </div>
     )
   }
