@@ -7,12 +7,29 @@ import markdownFile from './markdown.md'
 class Line extends Component{
   constructor(props) {
     super(props)
-    this.state = { code: null }
+    this.state = {
+      code: null,
+      dimensions: null,
+    }
   }
 
   componentWillMount() {
     fetch(markdownFile).then((response) => response.text()).then((text) => {
       this.setState({ code: text })
+    })
+  }
+
+  componentDidMount=()=>{
+    window.addEventListener("resize", this.updateDimensions);
+    this.updateDimensions()
+  }
+
+  updateDimensions=()=>{
+    this.setState({
+      dimensions:{
+        width: this.container.clientWidth - 50,
+        height: this.container.clientHeight - 103
+      }
     })
   }
 
@@ -23,7 +40,7 @@ class Line extends Component{
     />)
   }
 
-  render(){
+  renderContent=()=>{
     const {
       XYPlot,
       HorizontalBarSeries,
@@ -38,7 +55,8 @@ class Line extends Component{
     const content = (
       <div className="demo-line">
       <XYPlot
-        height={400} width={500}
+        height={this.state.dimensions.height}
+        width={this.state.dimensions.width}
       >
       <VerticalGridLines/>
       <HorizontalGridLines/>
@@ -74,13 +92,18 @@ class Line extends Component{
       </XYPlot>
       </div>
     )
+    return (
+      <TabsTemplate label="Line Chart"
+        content={content}
+        markdown={this.buildMarkdown()}
+      />
+    )
+  }
 
+  render(){
     return(
-      <div className="demo-charts">
-        <TabsTemplate label="Line Chart"
-          content={content}
-          markdown={this.buildMarkdown()}
-        />
+      <div className="demo-charts" ref={div=>{this.container = div}}>
+        { this.state.dimensions && this.renderContent() }
       </div>
     )
   }
