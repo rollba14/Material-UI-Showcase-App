@@ -8,12 +8,29 @@ import markdownFile from './markdown.md'
 class Bar extends Component{
   constructor(props) {
     super(props)
-    this.state = { code: null }
+    this.state = {
+      code: null,
+      dimensions: null
+    }
   }
 
   componentWillMount() {
     fetch(markdownFile).then((response) => response.text()).then((text) => {
       this.setState({ code: text })
+    })
+  }
+
+  componentDidMount=()=>{
+    window.addEventListener("resize", this.updateDimensions);
+    this.updateDimensions()
+  }
+
+  updateDimensions=()=>{
+    this.setState({
+      dimensions:{
+        width: this.container.clientWidth - 50,
+        height: this.container.clientHeight - 103
+      }
     })
   }
 
@@ -24,7 +41,7 @@ class Bar extends Component{
     />)
   }
 
-  render(){
+  renderContent=()=>{
     const {
       XYPlot,
       HorizontalBarSeries,
@@ -37,29 +54,33 @@ class Bar extends Component{
 
     const content = (
       <div className='demo-bar'>
-            <XYPlot
-              width={500}
-              height={400}
-              xDomain={[0,20]}
-              yDomain={[0,8]}
-            >
-              <VerticalGridLines />
-              <HorizontalGridLines/>
-              <XAxis />
-              <YAxis />
-              <HorizontalBarSeries
-                data={MyData}
-                style={{}}
-              />
-            </XYPlot>
-          </div>)
+        <XYPlot
+          width={this.state.dimensions.width}
+          height={this.state.dimensions.height}
+          xDomain={[0,20]}
+          yDomain={[0,8]}
+        >
+          <VerticalGridLines />
+          <HorizontalGridLines/>
+          <XAxis />
+          <YAxis />
+          <HorizontalBarSeries
+            data={MyData}
+            style={{}}
+          />
+        </XYPlot>
+    </div>)
+    return (<TabsTemplate label="Bar Chart"
+      content={content}
+      markdown={this.buildMarkdown()}
+    />)
+  }
+
+  render(){
 
     return(
-      <div className="demo-charts">
-        <TabsTemplate label="Bar Chart"
-          content={content}
-          markdown={this.buildMarkdown()}
-        />
+      <div className="demo-charts" ref={div=>{this.container = div}}>
+        { this.state.dimensions && this.renderContent() }
       </div>
     )
   }
