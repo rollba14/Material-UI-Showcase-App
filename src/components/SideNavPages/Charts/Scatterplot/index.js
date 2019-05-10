@@ -7,12 +7,35 @@ import markdownFile from './markdown.md'
 class Scatterplot extends Component{
   constructor(props) {
     super(props)
-    this.state = { code: null }
+    this.state = {
+      code: null,
+      container: null,
+      dimensions: null
+    }
   }
 
   componentWillMount() {
     fetch(markdownFile).then((response) => response.text()).then((text) => {
       this.setState({ code: text })
+    })
+  }
+
+  componentDidMount=()=>{
+    window.addEventListener("resize", this.updateDimensions);
+    let div = document.getElementsByClassName('demo-charts')[0]
+    this.setState({
+      container: div
+    },()=>{
+      this.updateDimensions()
+    })
+  }
+
+  updateDimensions=()=>{
+    this.setState({
+      dimensions:{
+        width: this.state.container.clientWidth - 50,
+        height: this.state.container.clientHeight - 103
+      }
     })
   }
 
@@ -23,7 +46,7 @@ class Scatterplot extends Component{
     />)
   }
 
-  render(){
+  renderContent=()=>{
     const {
       XYPlot,
       MarkSeries,
@@ -36,28 +59,33 @@ class Scatterplot extends Component{
 
     const content = (
       <div className='demo-area'>
-            <XYPlot
-              width={500}
-              height={400}
-              xDomain={[0,20]}
-              yDomain={[0,17]}
-            >
-              <VerticalGridLines />
-              <HorizontalGridLines/>
-              <XAxis />
-              <YAxis />
-              <MarkSeries
-                 data={importedData.data}
-              />
-            </XYPlot>
-      </div>)
+        <XYPlot
+          width={this.state.dimensions.width}
+          height={this.state.dimensions.height}
+          xDomain={[0,20]}
+          yDomain={[0,17]}
+        >
+          <VerticalGridLines />
+          <HorizontalGridLines/>
+          <XAxis />
+          <YAxis />
+          <MarkSeries
+             data={importedData.data}
+          />
+        </XYPlot>
+    </div>)
+    return (
+      <TabsTemplate label="Scatterplot Chart"
+        content={content}
+        markdown={this.buildMarkdown()}
+      />
+    )
+  }
 
+  render(){
     return(
       <div className="demo-charts">
-        <TabsTemplate label="Scatterplot Chart"
-          content={content}
-          markdown={this.buildMarkdown()}
-        />
+        { this.state.dimensions && this.renderContent() }
       </div>
     )
   }
