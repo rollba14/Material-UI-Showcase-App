@@ -9,6 +9,7 @@ class StackedBar extends Component{
     super(props)
     this.state = {
       code: null,
+      container: null,
       dimensions: null
     }
   }
@@ -21,14 +22,19 @@ class StackedBar extends Component{
 
   componentDidMount=()=>{
     window.addEventListener("resize", this.updateDimensions);
-    this.updateDimensions()
+    let div = document.getElementsByClassName('demo-charts')[0]
+    this.setState({
+      container: div
+    },()=>{
+      this.updateDimensions()
+    })
   }
 
   updateDimensions=()=>{
     this.setState({
       dimensions:{
-        width: this.container.clientWidth - 50,
-        height: this.container.clientHeight - 103
+        width: this.state.container.clientWidth - 50,
+        height: this.state.container.clientHeight - 103
       }
     })
   }
@@ -77,7 +83,7 @@ class StackedBar extends Component{
   render(){
     const {dimensions} = this.state
     return(
-      <div className="demo-charts" ref={div=>{this.container = div}}>
+      <div className="demo-charts">
         {  dimensions &&
            this.renderContent()
         }
