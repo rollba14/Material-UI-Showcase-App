@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import './style.styl';
 import PropTypes from 'prop-types';
-import {AppBar, Toolbar, Drawer, Icons, IconButton, Button, withStyles, Typography, List, ListItem, ListItemIcon, ListItemText, Divider, Router, Collapse} from '../../components';
+import {AppBar, Toolbar, Drawer, Icons, IconButton, Button, withStyles, Typography, List, ListItem, ListItemIcon, ListItemText, Divider, Router, Collapse, connect} from '../../components';
 import navItems from './data.js'
 import ListItemTemplate from '../../components/ListItemTemplate'
+
 
 class Sidebar extends Component{
   constructor(props){
@@ -37,4 +38,10 @@ class Sidebar extends Component{
   }
 }
 
-export default Sidebar;
+const mapStateToProps = (state) =>{
+  return{
+    openSideBar: state.openSideBar
+  }
+}
+
+export default connect(mapStateToProps)(Sidebar);
