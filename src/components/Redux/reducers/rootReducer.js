@@ -1,4 +1,9 @@
-const rootReducer = (state={},action) => {
+const rootReducer = (
+  state={
+    toggleSidebar: false
+  },
+  action
+)=>{
   return state;
 }
 
