@@ -1,6 +1,6 @@
 const rootReducer = (
   state={
-    toggleSidebar: false
+    openSideBar: false
   },
   action
 )=>{
@@ -8,7 +8,7 @@ const rootReducer = (
     case 'TOGGLE_SIDEBAR':
       return {
         ...state,
-        toggleSidebar: !state.toggleSidebar,
+        openSideBar: !state.openSideBar,
       }
     default:
       return state;
