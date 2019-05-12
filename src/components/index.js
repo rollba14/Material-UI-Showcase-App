@@ -13,9 +13,10 @@ import * as ComponentsPages from './SideNavPages/Components'
 import * as ChartsPages from './SideNavPages/Charts'
 import CodeBlock from './CodeBlock';
 import ReactMarkdown from 'react-markdown'
+import rootReducer from './Redux/reducers/rootReducer.js'
 
 
 
 // export all components, Icons, Charts
 export * from '@material-ui/core/';
-export { Icons, Charts, Router, Footer, IconPopover, ListItemTemplate, NotFoundPage, TabsTemplate, IconPage, HomePage, ColorsPage, ComponentsPages, ChartsPages, CodeBlock, ReactMarkdown};
+export { Icons, Charts, Router, Footer, IconPopover, ListItemTemplate, NotFoundPage, TabsTemplate, IconPage, HomePage, ColorsPage, ComponentsPages, ChartsPages, CodeBlock, ReactMarkdown, rootReducer};
