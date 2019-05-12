@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './style.styl';
 import PropTypes from 'prop-types';
-import {AppBar, Router, Toolbar, Icons, IconButton, Button, withStyles, Typography} from '../../components';
+import {AppBar, Router, Toolbar, Icons, IconButton, Button, withStyles, Typography, connect} from '../../components';
 import IconPopover from '../../components/IconPopover'
 
 class Navbar extends Component{
@@ -24,4 +24,13 @@ class Navbar extends Component{
   }
 }
 
-export default Navbar;
+const mapDispatchToProps = (dispatch) =>{
+  return{
+    toggleSidebar: ()=> {dispatch({
+        type:"TOGGLE_SIDEBAR"
+      })
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Navbar);
