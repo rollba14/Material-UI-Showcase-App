@@ -1,30 +1,17 @@
 import React, {Component} from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
-import {NotFoundPage, ColorsPage, HomePage, IconPage, ChartsPages, ComponentsPages, Footer} from '../components';
+import {NotFoundPage, ColorsPage, HomePage, IconPage, ChartsPages, ComponentsPages, Footer, connect} from '../components';
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
 
 class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      openSideBar: true,
-    }
-  }
-
-  toggleSidebar=()=>{
-    this.setState({
-      openSideBar: !this.state.openSideBar,
-    })
-  }
-
   render(){
     return (
       <BrowserRouter basename={"/Material-UI-Showcase-App"}>
         <div className="App">
-          <Navbar toggleSidebar={this.toggleSidebar}/>
-          <Sidebar openSideBar={this.state.openSideBar}/>
-          <div className={this.state.openSideBar? 'margin-left main':'main'}>
+          <Navbar/>
+          <Sidebar/>
+          <div className={this.props.openSideBar? 'margin-left main':'main'}>
               <div className="content">
                 <Switch>
                   <Route exact path='/' component={HomePage}/>
@@ -58,4 +45,11 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) =>{
+  return{
+    openSideBar: state.openSideBar
+  }
+}
+
+
+export default connect(mapStateToProps)(App);
