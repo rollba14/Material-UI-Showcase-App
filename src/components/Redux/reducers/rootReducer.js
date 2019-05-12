@@ -1,18 +1,11 @@
-const rootReducer = (
-  state={
-    openSideBar: false
-  },
-  action
-)=>{
-  switch(action.type){
-    case 'TOGGLE_SIDEBAR':
-      return {
-        ...state,
-        openSideBar: !state.openSideBar,
-      }
-    default:
-      return state;
-  }
-}
+import { combineReducers } from 'redux'
+import sideBarToggler from './sideBarToggler.js'
+import rightItemMenu from './rightItemMenu.js'
+
+
+const rootReducer = combineReducers({
+  sideBarToggler,
+  rightItemMenu
+})
 
 export default rootReducer;
