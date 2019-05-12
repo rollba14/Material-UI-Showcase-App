@@ -669,7 +669,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.3.1":
+"@babel/runtime@^7.3.1", "@babel/runtime@^7.4.3":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.4.tgz#dc2e34982eb236803aa27a07fea6857af1b9171d"
   dependencies:
@@ -4138,7 +4138,7 @@ hoist-non-react-statics@^2.3.1:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
 
-hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.2.1:
+hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.2.1, hoist-non-react-statics@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
   dependencies:
@@ -7377,7 +7377,7 @@ react-event-listener@^0.6.0, react-event-listener@^0.6.2:
     prop-types "^15.6.0"
     warning "^4.0.1"
 
-react-is@^16.6.0, react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
+react-is@^16.6.0, react-is@^16.6.3, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
 
@@ -7404,6 +7404,17 @@ react-motion@^0.5.2:
     performance-now "^0.2.0"
     prop-types "^15.5.8"
     raf "^3.1.0"
+
+react-redux@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-7.0.3.tgz#983c5a6de81cb1e696bd1c090ba826545f9170f1"
+  dependencies:
+    "@babel/runtime" "^7.4.3"
+    hoist-non-react-statics "^3.3.0"
+    invariant "^2.2.4"
+    loose-envify "^1.4.0"
+    prop-types "^15.7.2"
+    react-is "^16.8.6"
 
 react-router-dom@^5.0.0:
   version "5.0.0"
@@ -7649,6 +7660,13 @@ recursive-readdir@2.2.2:
   resolved "https://registry.yarnpkg.com/recursive-readdir/-/recursive-readdir-2.2.2.tgz#9946fb3274e1628de6e36b2f6714953b4845094f"
   dependencies:
     minimatch "3.0.4"
+
+redux@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-4.0.1.tgz#436cae6cc40fbe4727689d7c8fae44808f1bfef5"
+  dependencies:
+    loose-envify "^1.4.0"
+    symbol-observable "^1.2.0"
 
 refractor@^2.4.1:
   version "2.9.0"
@@ -8561,7 +8579,7 @@ svgo@^1.0.0, svgo@^1.2.1:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-symbol-observable@1.2.0, symbol-observable@^1.0.4, symbol-observable@^1.1.0:
+symbol-observable@1.2.0, symbol-observable@^1.0.4, symbol-observable@^1.1.0, symbol-observable@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
