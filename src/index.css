@@ -416,6 +416,7 @@ pre {
 }
 .content > div:first-child {
   height: 100%;
+  overflow: auto;
 }
 .main {
   text-align: center;
