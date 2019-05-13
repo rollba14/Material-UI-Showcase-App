@@ -7,10 +7,6 @@ import ListItemTemplate from '../../components/ListItemTemplate'
 
 
 class Sidebar extends Component{
-  constructor(props){
-    super(props)
-  }
-
   mapNodetoListItem=(node)=>{
     let subItems = null;
     if(node['subNavItems']){
@@ -21,18 +17,21 @@ class Sidebar extends Component{
         <ListItemTemplate label={node.label} icon={node.icon} url={node.url} subItems={subItems}/>
       </div>
     )
+  }
 
+  renderElements=()=>{
+    const navElements = this.props.navItems.map(this.mapNodetoListItem);
+    return (<List component="nav">
+      {navElements}
+    </List>)
   }
 
   render(){
-    const navElements = navItems.navItems.map(this.mapNodetoListItem)
     return(
       <div
         className={this.props.openSideBar ? "side-bar":'side-bar hidden'}
       >
-        <List component="nav">
-          {navElements}
-        </List>
+        {this.renderElements()}
       </div>
     )
   }
@@ -40,7 +39,8 @@ class Sidebar extends Component{
 
 const mapStateToProps = (state) =>{
   return{
-    openSideBar: state.sideBarToggler.openSideBar
+    openSideBar: state.sideBarToggler.openSideBar,
+    navItems: state.sideBarItems.navItems,
   }
 }
 
