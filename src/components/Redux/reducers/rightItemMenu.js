@@ -1,6 +1,6 @@
 const initState= {
   anchorEl: null,
-  rightItemMenu: [
+  items: [
     {
       link: "https://www.yahoo.com/",
       name: "Yahoo",
@@ -29,7 +29,7 @@ const rightItemMenu = (
     case 'CLOSE_RIGHT_ITEM_MENU':
       return {
         ...state,
-        anchor: null,
+        anchorEl: null,
       }
     default:
       return state;

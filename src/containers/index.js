@@ -47,7 +47,7 @@ class App extends Component {
 
 const mapStateToProps = (state) =>{
   return{
-    openSideBar: state.openSideBar
+    openSideBar: state.sideBarToggler.openSideBar
   }
 }
 
