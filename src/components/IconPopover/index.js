@@ -1,36 +1,22 @@
 import React, {Component} from 'react';
 import './style.styl';
 import {AppBar, Toolbar, Icons, Menu, MenuItem, IconButton, Button, Typography, List, ListItem} from '../';
+import {connect} from "react-redux"
 
 class IconPopover extends Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      anchorEl: null,
-    }
-  };
-
-  handleClick = event =>{
-    this.setState({
-      anchorEl: event.currentTarget,
-    });
-  };
-
-  handleClose=()=>{
-    this.setState({
-      anchorEl: null,
-    })
-  }
-
   render(){
-    const {classes} = this.props;
-    const {anchorEl} = this.state;
+    const {anchorEl, handleClick, handleClose, items} = this.props;
+    const menuItems = items.map(i=>{
+      return (<MenuItem onClick={handleClose} key={i.name+"PopOver"}>
+        <a href={i.link}>{i.name}</a>
+      </MenuItem>)
+    })
     return(
       <div>
         <IconButton
           aria-owns={anchorEl ? 'icon-popper':undefined}
           aria-haspopup='true'
-          onClick={this.handleClick}
+          onClick={handleClick}
         >
           <Icons.AccountCircle/>
         </IconButton>
@@ -38,21 +24,37 @@ class IconPopover extends Component{
           id="icon-popper"
           open={Boolean(anchorEl)}
           anchorEl={anchorEl}
-          onClose={this.handleClose}
+          onClose={handleClose}
         >
-          <MenuItem onClick={this.handleClose}>
-            <a href="https://www.yahoo.com/">Yahoo</a>
-          </MenuItem>
-          <MenuItem>
-            <a href="https://www.google.com/">Google</a>
-          </MenuItem>
-          <MenuItem onClick={this.handleClose}>
-            <a href="https://www.bing.com/">Bing</a>
-          </MenuItem>
+         {menuItems}
         </Menu>
       </div>
     )
   }
 }
 
-export default IconPopover;
+const mapStateToProps = (state) =>{
+  return{
+    ...state,
+    anchorEl: state.rightItemMenu.anchorEl,
+    items: state.rightItemMenu.items,
+  }
+}
+
+const mapDispatchToProps=(dispatch)=>{
+  return {
+    handleClick: (event)=>{
+      dispatch({
+        type:"OPEN_RIGHT_ITEM_MENU",
+        anchorEl: event.currentTarget
+      })
+    },
+    handleClose: ()=>{
+      dispatch({
+        type:"CLOSE_RIGHT_ITEM_MENU",
+      })
+    }
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(IconPopover);
