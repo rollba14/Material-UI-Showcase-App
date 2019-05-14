@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
-import {NotFoundPage, ColorsPage, HomePage, IconPage, ChartsPages, ComponentsPages, Footer, connect} from '../components';
+import {NotFoundPage, ColorsPage, HomePage, IconPage, ChartsPages, ComponentsPages, Footer} from '../components';
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
+import {connect} from 'react-redux'
 
 class App extends Component {
   render(){
