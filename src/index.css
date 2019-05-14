@@ -179,6 +179,24 @@ iframe {
   color: #4b7aa8;
   padding-bottom: 10px;
 }
+.demo-badge h1,
+.demo-badge h2,
+.demo-badge h3,
+.demo-badge h4,
+.demo-badge h5,
+.demo-badge h6 {
+  padding: 10px;
+  color: #4b7aa8;
+}
+.demo-badge > div {
+  padding: 10px;
+  background-color: #f2f6fa;
+}
+.demo-badge > div svg {
+  width: 40px;
+  height: 40px;
+  color: #000;
+}
 .example-template .demo-body {
   padding: 10px 2px;
 }
@@ -328,6 +346,11 @@ iframe {
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
+}
+.flex-x-space-evenly {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
 }
 .demo-charts .example-body div {
   height: 100%;

@@ -9,7 +9,9 @@ import SpinnerPage from './Spinner'
 import TablePage from './Table'
 import TabsPage from './Tabs'
 import TreeTablePage from './TreeTable'
+import BadgePage from './Badge'
 
 export {
-  AvatarPage, ButtonPage, DialogPage, MarkdownPage, MessageBarPage, NotificationPage, ProgressPage, SpinnerPage, TablePage, TabsPage, TreeTablePage
+  AvatarPage, ButtonPage, DialogPage, MarkdownPage, MessageBarPage, NotificationPage, ProgressPage, SpinnerPage, TablePage, TabsPage, TreeTablePage,
+  BadgePage
 };

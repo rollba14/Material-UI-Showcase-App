@@ -23,6 +23,11 @@ const sideBarState = {
           icon: 'NavigateNext'
         },
         {
+          label: 'Badge',
+          url: BASE_URL + 'components/badge',
+          icon: 'NavigateNext'
+        },
+        {
           label: 'Button',
           url: BASE_URL + 'components/button',
           icon: 'NavigateNext'

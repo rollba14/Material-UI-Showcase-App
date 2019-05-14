@@ -29,6 +29,7 @@ class App extends Component {
                   <Route path='/components/dialog' component={ComponentsPages.DialogPage}/>
                   <Route path='/components/avatar' component={ComponentsPages.AvatarPage}/>
                   <Route path='/components/markdown' component={ComponentsPages.MarkdownPage}/>
+                  <Route path='/components/badge' component={ComponentsPages.BadgePage}/>
                   <Route path='/charts/bar' component={ChartsPages.Bar}/>
                   <Route path='/charts/stackbar' component={ChartsPages.StackedBar}/>
                   <Route path='/charts/area' component={ChartsPages.Area}/>
