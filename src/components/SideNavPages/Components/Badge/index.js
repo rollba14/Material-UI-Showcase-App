@@ -5,9 +5,22 @@ import TabsTemplate from '../../../TabsTemplate'
 import markdownFile from './markdown.md'
 
 class BadgePage extends Component{
+  constructor(props) {
+    super(props)
+    this.state = { code: null }
+  }
+
+  componentWillMount() {
+    fetch(markdownFile).then((response) => response.text()).then((text) => {
+      this.setState({ code: text })
+    })
+  }
 
   buildMarkdown=()=>{
-
+    return(<ReactMarkdown
+      source={this.state.code}
+      renderers={{code:CodeBlock}}
+    />)
   }
 
   createContent=()=>{
