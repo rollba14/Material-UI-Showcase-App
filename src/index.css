@@ -290,6 +290,9 @@ iframe {
   justify-content: center;
   flex-direction: column;
 }
+.home-page .paper {
+  overflow: auto;
+}
 .icon-page .icon {
   width: 50px;
   height: 50px;
@@ -416,7 +419,6 @@ pre {
 }
 .content > div:first-child {
   height: 100%;
-  overflow: auto;
 }
 .main {
   text-align: center;
