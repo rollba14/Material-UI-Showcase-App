@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './style.styl';
 import PropTypes from 'prop-types';
 import {AppBar, Toolbar, Drawer, Icons, IconButton, Button, withStyles, Typography, List, ListItem, ListItemIcon, ListItemText, Divider, Router, Collapse} from '../../components';
-import navItems from './data.js'
 import ListItemTemplate from '../../components/ListItemTemplate'
 import {connect} from 'react-redux'
 
