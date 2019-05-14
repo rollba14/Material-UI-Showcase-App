@@ -107,29 +107,22 @@ const sideBarState = {
       icon: 'BlurOn'
     }
   ],
-  collapsableItems: [],
+  collapsableTogglers: {},
 }
-
 
 const sideBarItems = (
   state=sideBarState,
   action
 ) => {
   switch(action.type){
-    case 'ADD_COLLAPSABLE_ITEM':
-      let item = {[action.label]: false}
-      return{
-        ...state,
-        collapsableItems: [...state.collapsableItems, item]
-      }
     case 'TOGGLE_COLLAPSABLE_ITEM':
+      let boolean = !state.collapsableTogglers[action.label];
       return{
         ...state,
-        collapsableItems: state.collapsableItems.map(item=>{
-          if(item.hasOwnProperty(action.label)) {
-            item[action.label] =  ![item[action.label]];
-          }
-        })
+        collapsableTogglers: {
+          ...state.collapsableTogglers,
+          [action.label]: boolean,
+        }
       }
     default:
       return state;
