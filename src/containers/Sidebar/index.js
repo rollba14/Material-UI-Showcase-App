@@ -1,20 +1,21 @@
 import React, {Component} from 'react';
 import './style.styl';
 import PropTypes from 'prop-types';
-import {AppBar, Toolbar, Drawer, Icons, IconButton, Button, withStyles, Typography, List, ListItem, ListItemIcon, ListItemText, Divider, Router, Collapse, connect} from '../../components';
+import {AppBar, Toolbar, Drawer, Icons, IconButton, Button, withStyles, Typography, List, ListItem, ListItemIcon, ListItemText, Divider, Router, Collapse} from '../../components';
 import navItems from './data.js'
 import ListItemTemplate from '../../components/ListItemTemplate'
-
+import {connect} from 'react-redux'
 
 class Sidebar extends Component{
   mapNodetoListItem=(node)=>{
     let subItems = null;
+    let key = node.label + '-Toggler';
     if(node['subNavItems']){
       subItems = node['subNavItems'].map(n=>this.mapNodetoListItem(n))
     }
     return (
-      <div className="list-item-node" key={node.label + node.icon}>
-        <ListItemTemplate label={node.label} icon={node.icon} url={node.url} subItems={subItems}/>
+      <div className="list-item-node" key={key}>
+        <ListItemTemplate label={node.label} icon={node.icon} url={node.url} subItems={subItems} toggleFn={this.props.toggleCollapsableItem.bind(this,key)}/>
       </div>
     )
   }
@@ -39,9 +40,21 @@ class Sidebar extends Component{
 
 const mapStateToProps = (state) =>{
   return{
+    ...state,
     openSideBar: state.sideBarToggler.openSideBar,
     navItems: state.sideBarItems.navItems,
   }
 }
 
-export default connect(mapStateToProps)(Sidebar);
+const mapDispatchToProps = (dispatch) =>{
+  return{
+    toggleCollapsableItem: (label)=>{
+      dispatch({
+        type: "TOGGLE_COLLAPSABLE_ITEM",
+        label
+      })
+    }
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Sidebar);
