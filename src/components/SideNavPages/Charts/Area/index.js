@@ -62,6 +62,8 @@ class StackedBar extends Component{
             <XYPlot
               width={dimensions.width}
               height={dimensions.height}
+              xDomain={[0,20]}
+              yDomain={[6,10.5]}
             >
               <VerticalGridLines />
               <HorizontalGridLines/>
