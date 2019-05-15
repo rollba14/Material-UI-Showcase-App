@@ -148,6 +148,14 @@ iframe {
 .margin-left .footer {
   width: calc(100% - 230px);
 }
+@media screen and (max-width: 568px) {
+  .footer {
+    position: relative;
+  }
+  .margin-left .footer {
+    width: 100%;
+  }
+}
 #icon-popper a {
   color: #000;
 }

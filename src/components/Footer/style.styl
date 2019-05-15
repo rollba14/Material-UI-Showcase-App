@@ -12,3 +12,10 @@ sideBarWidth = 230px
 .margin-left
   .footer
     width: "calc(100% - %s)" % sideBarWidth
+
+@media screen and (max-width: 568px)
+  .footer
+    position: relative;
+  .margin-left
+    .footer
+      width: 100%
