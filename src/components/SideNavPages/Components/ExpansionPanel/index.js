@@ -13,6 +13,12 @@ class ExpansionPanelPage extends Component{
     }
   }
 
+  componentWillMount() {
+    fetch(markdownFile).then((response) => response.text()).then((text) => {
+      this.setState({ code: text })
+    })
+  }
+
   buildMarkdown=()=>{
     return(<ReactMarkdown
       source={this.state.code}
