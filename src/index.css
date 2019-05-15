@@ -322,6 +322,9 @@ iframe {
 .demo-progress .example-body > div > div > div {
   width: 100%;
 }
+.white-bg {
+  background-color: #fff !important;
+}
 .demo-spinner .example-body > div {
   height: 100%;
 }

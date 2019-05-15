@@ -26,6 +26,8 @@ class ProgressPage extends Component {
   createContent=()=>{
     return (<div>
       <LinearProgress color="primary"/>
+      <LinearProgress color="primary" className="white-bg"/>
+      <LinearProgress color="secondary" className="white-bg" variant="query"/>
       <LinearProgress color="secondary" variant="query"/>
     </div>)
   }
