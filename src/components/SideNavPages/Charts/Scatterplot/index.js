@@ -70,6 +70,7 @@ class Scatterplot extends Component{
           <XAxis />
           <YAxis />
           <MarkSeries
+             color="#4657B8"
              data={importedData.data}
           />
         </XYPlot>

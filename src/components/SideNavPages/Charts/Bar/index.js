@@ -73,6 +73,8 @@ class Bar extends Component{
           <HorizontalBarSeries
             data={MyData}
             style={{}}
+            color="#79C6E3"
+            opacity=".9"
           />
         </XYPlot>
     </div>)

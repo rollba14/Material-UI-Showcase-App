@@ -71,7 +71,7 @@ class Line extends Component{
         <LineSeries
           data={[
             {x: 1, y: 7},
-            {x: 2, y: 5},
+            {x: 2, y: 3},
             {x: 3, y: 10},
             {x: 4, y: 9}
           ]}/>
@@ -81,8 +81,8 @@ class Line extends Component{
           }}
           data={[
             {x: 1, y: 8},
-            {x: 2, y: 10},
-            {x: 3, y: 3},
+            {x: 1.8, y: 10},
+            {x: 2.7, y: 3},
             {x: 4, y: 11}
           ]}
           strokeDasharray="7, 3"
@@ -91,9 +91,8 @@ class Line extends Component{
           color="orange"
           data={[
             {x: 1, y: 5},
-            {x: 2, y: 9},
-            {x: 3, y: 6},
-            {x: 4, y: 8}
+            {x: 2.4, y: 9},
+            {x: 4, y: 5}
           ]}/>
       </XYPlot>
       </div>
