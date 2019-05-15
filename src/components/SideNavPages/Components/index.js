@@ -10,8 +10,9 @@ import TablePage from './Table'
 import TabsPage from './Tabs'
 import TreeTablePage from './TreeTable'
 import BadgePage from './Badge'
+import ExpansionPanelPage from './ExpansionPanel'
 
 export {
   AvatarPage, ButtonPage, DialogPage, MarkdownPage, MessageBarPage, NotificationPage, ProgressPage, SpinnerPage, TablePage, TabsPage, TreeTablePage,
-  BadgePage
+  BadgePage, ExpansionPanelPage
 };

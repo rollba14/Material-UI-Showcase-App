@@ -38,6 +38,11 @@ const sideBarState = {
           icon: 'NavigateNext'
         },
         {
+          label: 'ExpansionPanel',
+          url: BASE_URL + 'components/expansion-panel',
+          icon: 'NavigateNext'
+        },
+        {
           label: 'MessageBar',
           url: BASE_URL + 'components/messagebar',
           icon: 'NavigateNext'
