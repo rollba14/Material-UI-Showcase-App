@@ -62,7 +62,7 @@ class BadgePage extends Component{
 
   render(){
     return(
-      <TabsTemplate label="button"
+      <TabsTemplate label="Badge"
         content={this.createContent()}
         markdown={this.buildMarkdown()}
       />
