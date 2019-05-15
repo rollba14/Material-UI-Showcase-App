@@ -80,6 +80,11 @@ const sideBarState = {
       icon: 'Timeline',
       subNavItems: [
         {
+          label: 'Hexbin',
+          url: BASE_URL + 'charts/hexbin',
+          icon: 'NavigateNext'
+        },
+        {
           label: 'Bar',
           url: BASE_URL + 'charts/bar',
           icon: 'NavigateNext'
