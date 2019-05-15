@@ -69,6 +69,7 @@ class StackedBar extends Component{
               <YAxis />
               <AreaSeries
                  data={importedData.data}
+                 curve="curveNatural"
                  opacity={0.5}
               />
             </XYPlot>
