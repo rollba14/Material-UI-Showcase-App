@@ -35,7 +35,7 @@ class TabsPage extends Component{
   render(){
     const value = this.state.selectedTab;
     const content =(
-      <div>
+      <div className="flex-justify-center">
         <Paper>
           <AppBar className="app-bar" position="static">
             <Tabs value={value} onChange={this.handleTabChange}

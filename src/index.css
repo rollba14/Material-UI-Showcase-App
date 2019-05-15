@@ -225,6 +225,13 @@ iframe {
 .demo-dialog {
   text-align: center;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.demo-dialog button {
+  padding: 10px 30px;
 }
 .demo-dialog-content {
   padding: 20px;
@@ -284,6 +291,10 @@ iframe {
 .demo-notification-wrapper {
   margin: auto;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 .demo-notification-wrapper button {
   font-weight: bold;
@@ -326,6 +337,12 @@ iframe {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 100%;
+}
+.demo-tabs .example-body-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .home-page .paper {
   overflow: auto;
@@ -408,6 +425,9 @@ pre {
 }
 .example-template .tab {
   padding: 15px;
+}
+.example-template .example-body-content {
+  height: 100%;
 }
 .navbar-root {
   background-color: #4db6ac;
