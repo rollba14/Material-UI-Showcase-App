@@ -80,8 +80,8 @@ const sideBarState = {
       icon: 'Timeline',
       subNavItems: [
         {
-          label: 'Hexbin',
-          url: BASE_URL + 'charts/hexbin',
+          label: 'Area',
+          url: BASE_URL + 'charts/area',
           icon: 'NavigateNext'
         },
         {
@@ -90,13 +90,8 @@ const sideBarState = {
           icon: 'NavigateNext'
         },
         {
-          label: 'Stacked Bar',
-          url: BASE_URL + 'charts/stackbar',
-          icon: 'NavigateNext'
-        },
-        {
-          label: 'Area',
-          url: BASE_URL + 'charts/area',
+          label: 'Hexbin',
+          url: BASE_URL + 'charts/hexbin',
           icon: 'NavigateNext'
         },
         {
@@ -113,7 +108,12 @@ const sideBarState = {
           label: 'Scatterplot',
           url: BASE_URL + 'charts/scatterplot',
           icon: 'NavigateNext'
-        }
+        },
+        {
+          label: 'Stacked Bar',
+          url: BASE_URL + 'charts/stackbar',
+          icon: 'NavigateNext'
+        },
       ]
     },
     {
