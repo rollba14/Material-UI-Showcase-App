@@ -32,10 +32,6 @@ class AvatarPage extends Component{
              <Grid container justify="space-evenly" alignItems="center">
                <Avatar className="pageview-avatar" src="https://cdn.pixabay.com/photo/2014/04/03/10/32/businessman-310819_960_720.png">
                </Avatar>
-               <Avatar className="folder-avatar" src="https://image.flaticon.com/icons/svg/1716/1716937.svg">
-               </Avatar>
-               <Avatar className="assignment-avatar" src="https://image.flaticon.com/icons/svg/345/345736.svg">
-               </Avatar>
              </Grid>
            </Paper>
          </div>
@@ -46,7 +42,7 @@ class AvatarPage extends Component{
                <Avatar className="assignment-avatar">
                  <Icons.Assignment/>
                </Avatar>
-               <Avatar className="pageview-avatar">
+               <Avatar className="orange-bg">
                  <Icons.Pageview/>
                </Avatar>
                <Avatar className="folder-avatar">
@@ -59,14 +55,20 @@ class AvatarPage extends Component{
            <h4>Letters</h4>
            <Paper className="bg-light-gray paper">
              <Grid container justify="space-evenly" alignItems="center">
-               <Avatar className="pageview-avatar">
-                 R
-               </Avatar>
                <Avatar className="folder-avatar">
-                 B
+                 A
+               </Avatar>
+               <Avatar className="teal-bg">
+                 M
+               </Avatar>
+               <Avatar className="purple-bg">
+                 A
+               </Avatar>
+               <Avatar className="yellow-bg">
+                 Z
                </Avatar>
                <Avatar className="assignment-avatar">
-                 G
+                 E
                </Avatar>
              </Grid>
            </Paper>

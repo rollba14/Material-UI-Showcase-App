@@ -172,6 +172,18 @@ iframe {
 .bg-light-gray {
   background-color: #eee !important;
 }
+.purple-bg {
+  background-color: #e266e2 !important;
+}
+.orange-bg {
+  background-color: #f3a90d !important;
+}
+.yellow-bg {
+  background-color: #fce80f !important;
+}
+.teal-bg {
+  background-color: #b9ea19 !important;
+}
 .demo-avatar > div {
   padding: 10px 20px;
 }
