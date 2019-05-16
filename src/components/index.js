@@ -13,7 +13,7 @@ import * as ComponentsPages from './SideNavPages/Components'
 import * as ChartsPages from './SideNavPages/Charts'
 import CodeBlock from './CodeBlock';
 import ReactMarkdown from 'react-markdown'
-import rootReducer from './Redux/reducers/rootReducer.js'
+import rootReducer from '../Redux/reducers/rootReducer.js'
 
 
 
