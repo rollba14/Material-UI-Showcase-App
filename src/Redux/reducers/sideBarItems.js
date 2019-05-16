@@ -1,3 +1,5 @@
+import {ActionType} from '../actions'
+
 const BASE_URL = '/';
 
 const sideBarState = {
@@ -130,7 +132,7 @@ const sideBarItems = (
   action
 ) => {
   switch(action.type){
-    case 'TOGGLE_COLLAPSABLE_ITEM':
+    case ActionType.TOGGLE_COLLAPSABLE_ITEM:
       let boolean = !state.collapsableTogglers[action.label];
       return{
         ...state,

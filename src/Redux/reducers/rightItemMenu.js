@@ -1,3 +1,5 @@
+import {ActionType} from '../actions'
+
 const initState= {
   anchorEl: null,
   items: [
@@ -21,12 +23,12 @@ const rightItemMenu = (
   action
 ) => {
   switch(action.type){
-    case 'OPEN_RIGHT_ITEM_MENU':
+    case ActionType.OPEN_RIGHT_ITEM_MENU:
       return {
         ...state,
         anchorEl: action.anchorEl,
       }
-    case 'CLOSE_RIGHT_ITEM_MENU':
+    case ActionType.CLOSE_RIGHT_ITEM_MENU:
       return {
         ...state,
         anchorEl: null,

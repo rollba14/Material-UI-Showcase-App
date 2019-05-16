@@ -1,3 +1,5 @@
+import {ActionType} from '../actions'
+
 const initState = {
   openSideBar: true
 }
@@ -7,7 +9,7 @@ const sideBarToggler = (
   action
 )=>{
   switch(action.type){
-    case 'TOGGLE_SIDEBAR':
+    case ActionType.TOGGLE_SIDEBAR:
       return {
         ...state,
         openSideBar: !state.openSideBar,

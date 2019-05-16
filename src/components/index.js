@@ -14,7 +14,7 @@ import * as ChartsPages from './SideNavPages/Charts'
 import CodeBlock from './CodeBlock';
 import ReactMarkdown from 'react-markdown'
 import rootReducer from '../Redux/reducers/rootReducer.js'
-import ActionCreators from '../Redux/actions/'
+import * as ActionCreators from '../Redux/actions/'
 
 
 
