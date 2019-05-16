@@ -39,7 +39,6 @@ class Sidebar extends Component{
 
 const mapStateToProps = (state) =>{
   return{
-    ...state,
     openSideBar: state.sideBarToggler.openSideBar,
     navItems: state.sideBarItems.navItems,
   }

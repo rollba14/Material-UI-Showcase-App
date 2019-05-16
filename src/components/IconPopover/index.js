@@ -35,7 +35,6 @@ class IconPopover extends Component{
 
 const mapStateToProps = (state) =>{
   return{
-    ...state,
     anchorEl: state.rightItemMenu.anchorEl,
     items: state.rightItemMenu.items,
   }

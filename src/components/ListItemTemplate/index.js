@@ -56,7 +56,6 @@ const mapStateToProps = (state, ownProps)=>{
       collapsableTogglers = state.sideBarItems.collapsableTogglers
   }
   return {
-    ...state,
     ...ownProps,
     collapsableTogglers
   }
