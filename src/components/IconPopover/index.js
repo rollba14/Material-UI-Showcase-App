@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './style.styl';
-import {AppBar, Toolbar, Icons, Menu, MenuItem, IconButton, Button, Typography, List, ListItem} from '../';
+import {AppBar, Toolbar, Icons, Menu, MenuItem, IconButton, Button, Typography, List, ListItem, ActionCreators} from '../';
 import {connect} from "react-redux"
 
 class IconPopover extends Component{
@@ -43,16 +43,13 @@ const mapStateToProps = (state) =>{
 const mapDispatchToProps=(dispatch)=>{
   return {
     handleClick: (event)=>{
-      dispatch({
-        type:"OPEN_RIGHT_ITEM_MENU",
-        anchorEl: event.currentTarget
-      })
-    },
+      dispatch(
+        ActionCreators.openRightItemMenu(event)
+    )},
     handleClose: ()=>{
-      dispatch({
-        type:"CLOSE_RIGHT_ITEM_MENU",
-      })
-    }
+      dispatch(
+        ActionCreators.closeRightItemMenu()
+    )},
   }
 }
 

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './style.styl';
 import PropTypes from 'prop-types';
-import {AppBar, Router, Toolbar, Icons, IconButton, Button, withStyles, Typography} from '../../components';
+import {AppBar, Router, Toolbar, Icons, IconButton, Button, withStyles, Typography, ActionCreators} from '../../components';
 import IconPopover from '../../components/IconPopover'
 import {connect} from 'react-redux';
 
@@ -27,9 +27,9 @@ class Navbar extends Component{
 
 const mapDispatchToProps = (dispatch) =>{
   return{
-    toggleSidebar: ()=> {dispatch({
-        type:"TOGGLE_SIDEBAR"
-      })
+    toggleSidebar: ()=> {dispatch(
+      ActionCreators.toggleSidebar()
+     )
     }
   }
 }

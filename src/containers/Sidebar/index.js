@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './style.styl';
 import PropTypes from 'prop-types';
-import {AppBar, Toolbar, Drawer, Icons, IconButton, Button, withStyles, Typography, List, ListItem, ListItemIcon, ListItemText, Divider, Router, Collapse} from '../../components';
+import {AppBar, Toolbar, Drawer, Icons, IconButton, Button, withStyles, Typography, List, ListItem, ListItemIcon, ListItemText, Divider, Router, Collapse, ActionCreators} from '../../components';
 import ListItemTemplate from '../../components/ListItemTemplate'
 import {connect} from 'react-redux'
 
@@ -47,10 +47,9 @@ const mapStateToProps = (state) =>{
 const mapDispatchToProps = (dispatch) =>{
   return{
     toggleCollapsableItem: (label)=>{
-      dispatch({
-        type: "TOGGLE_COLLAPSABLE_ITEM",
-        label
-      })
+      dispatch(
+        ActionCreators.toggleCollapsableItem(label)
+      )
     }
   }
 }
