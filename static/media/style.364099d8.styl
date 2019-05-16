@@ -1,0 +1,20 @@
+tabsHeight = 58px
+
+.example-template
+  &, & > div:first-child
+    height: 100%
+  .app-bar
+    background-color: white
+  .example-body
+    text-align: left
+    padding: 15px
+    max-height: "calc(100% - %s)" % tabsHeight !important
+    overflow: auto;
+    height: 100%;
+    & > .example-body-markdown
+      height: 100%;
+      width: 100%;
+  .tab
+    padding: 15px
+  .example-body-content
+    height: 100%
