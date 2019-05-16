@@ -1,5 +1,5 @@
 const initState = {
-  openSideBar: false
+  openSideBar: true
 }
 
 const sideBarToggler = (
