@@ -35,6 +35,7 @@ class App extends Component {
                   <Route path='/components/chip' component={ComponentsPages.ChipPage}/>
                   <Route path='/components/expansion-panel' component={ComponentsPages.ExpansionPanelPage}/>
                   <Route path='/charts/bar' component={ChartsPages.Bar}/>
+                  <Route path='/charts/linemark' component={ChartsPages.LineMark}/>
                   <Route path='/charts/hexbin' component={ChartsPages.Hexbin}/>
                   <Route path='/charts/stackbar' component={ChartsPages.StackedBar}/>
                   <Route path='/charts/area' component={ChartsPages.Area}/>

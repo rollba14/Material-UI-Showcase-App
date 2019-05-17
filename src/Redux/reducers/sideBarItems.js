@@ -117,6 +117,11 @@ const sideBarState = {
           icon: 'NavigateNext'
         },
         {
+          label: 'LineMark',
+          url: BASE_URL + 'charts/linemark',
+          icon: 'NavigateNext'
+        },
+        {
           label: 'Pie',
           url: BASE_URL + 'charts/pie',
           icon: 'NavigateNext'
