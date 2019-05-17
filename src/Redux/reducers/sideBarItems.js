@@ -35,6 +35,11 @@ const sideBarState = {
           icon: 'NavigateNext'
         },
         {
+          label: 'Card',
+          url: BASE_URL + 'components/card',
+          icon: 'NavigateNext'
+        },
+        {
           label: 'Dialog',
           url: BASE_URL + 'components/dialog',
           icon: 'NavigateNext'
