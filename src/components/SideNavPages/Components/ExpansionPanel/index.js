@@ -93,10 +93,12 @@ class ExpansionPanelPage extends Component{
 
   render(){
     return(
-      <TabsTemplate label="Expansion Panel"
-        content={this.createContent()}
-        markdown={this.buildMarkdown()}
-      />
+      <div className="demo-expansion-panel-wrapper">
+        <TabsTemplate label="Expansion Panel"
+          content={this.createContent()}
+          markdown={this.buildMarkdown()}
+        />
+      </div>
     )
   }
 }

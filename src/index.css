@@ -232,7 +232,11 @@ iframe {
 }
 .demo-card {
   max-width: 300px;
-  margin: auto;
+}
+.demo-card-wrapper .example-body-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .demo-chip {
   display: flex;
@@ -274,6 +278,12 @@ iframe {
 .expansion-panel > .expansion-panel-summary {
   background-color: #f7f7f7;
   border-bottom: 1px solid #dddbdb;
+}
+.demo-expansion-panel-wrapper .example-body-content {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .messageBar {
   padding: 15px 10px;
