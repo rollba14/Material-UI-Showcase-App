@@ -13,8 +13,9 @@ import BadgePage from './Badge'
 import ExpansionPanelPage from './ExpansionPanel'
 import PickersPage from './Pickers'
 import CardPage from './Card'
+import ChipPage from './Chip'
 
 export {
   AvatarPage, ButtonPage, DialogPage, MarkdownPage, MessageBarPage, NotificationPage, ProgressPage, SpinnerPage, TablePage, TabsPage, TreeTablePage,
-  BadgePage, ExpansionPanelPage, PickersPage, CardPage
+  BadgePage, ExpansionPanelPage, PickersPage, CardPage, ChipPage, 
 };

@@ -40,6 +40,11 @@ const sideBarState = {
           icon: 'NavigateNext'
         },
         {
+          label: 'Chip',
+          url: BASE_URL + 'components/chip',
+          icon: 'NavigateNext'
+        },
+        {
           label: 'Dialog',
           url: BASE_URL + 'components/dialog',
           icon: 'NavigateNext'

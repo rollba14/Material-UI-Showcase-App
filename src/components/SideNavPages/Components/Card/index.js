@@ -52,7 +52,7 @@ class CardPage extends Component{
   render(){
     return(
       <div>
-        <TabsTemplate label="cards"
+        <TabsTemplate label="card"
           content={this.createContent()}
           markdown={this.buildMarkdown()}
         />
