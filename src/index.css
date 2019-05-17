@@ -309,6 +309,19 @@ iframe {
   color: #2095f2;
   border-color: #2095f2;
 }
+.demo-pickers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.demo-pickers form {
+  width: 260px;
+}
+.demo-pickers form div {
+  width: 260px;
+  background-color: #f2f6fa;
+}
 .demo-progress .example-body > div {
   height: 100%;
 }

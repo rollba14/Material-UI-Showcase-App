@@ -55,6 +55,11 @@ const sideBarState = {
           icon: 'NavigateNext'
         },
         {
+          label: 'Pickers',
+          url: BASE_URL + 'components/pickers',
+          icon: 'NavigateNext'
+        },
+        {
           label: 'Progress',
           url: BASE_URL + 'components/progress',
           icon: 'NavigateNext'

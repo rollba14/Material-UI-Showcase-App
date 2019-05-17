@@ -11,8 +11,9 @@ import TabsPage from './Tabs'
 import TreeTablePage from './TreeTable'
 import BadgePage from './Badge'
 import ExpansionPanelPage from './ExpansionPanel'
+import PickersPage from './Pickers'
 
 export {
   AvatarPage, ButtonPage, DialogPage, MarkdownPage, MessageBarPage, NotificationPage, ProgressPage, SpinnerPage, TablePage, TabsPage, TreeTablePage,
-  BadgePage, ExpansionPanelPage
+  BadgePage, ExpansionPanelPage, PickersPage
 };
