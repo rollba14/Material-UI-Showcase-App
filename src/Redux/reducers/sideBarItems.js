@@ -117,7 +117,7 @@ const sideBarState = {
           icon: 'NavigateNext'
         },
         {
-          label: 'LineMark',
+          label: 'Line Mark',
           url: BASE_URL + 'charts/linemark',
           icon: 'NavigateNext'
         },
@@ -134,6 +134,11 @@ const sideBarState = {
         {
           label: 'Stacked Bar',
           url: BASE_URL + 'charts/stackbar',
+          icon: 'NavigateNext'
+        },
+        {
+          label: 'Whisker Series',
+          url: BASE_URL + 'charts/whiskerseries',
           icon: 'NavigateNext'
         },
       ]

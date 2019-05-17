@@ -39,6 +39,7 @@ class App extends Component {
                   <Route path='/charts/hexbin' component={ChartsPages.Hexbin}/>
                   <Route path='/charts/stackbar' component={ChartsPages.StackedBar}/>
                   <Route path='/charts/area' component={ChartsPages.Area}/>
+                  <Route path='/charts/whiskerseries' component={ChartsPages.WhiskerSeries}/>
                   <Route path='/charts/line' component={ChartsPages.Line}/>
                   <Route path='/charts/pie' component={ChartsPages.Pie}/>
                   <Route path='/charts/scatterplot' component={ChartsPages.Scatterplot}/>
