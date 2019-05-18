@@ -159,6 +159,10 @@ iframe {
 #icon-popper a {
   color: #000;
 }
+.active div,
+.active span {
+  color: #4db6ac;
+}
 .not-found-page {
   text-align: center;
   margin: auto;

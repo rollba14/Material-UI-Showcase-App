@@ -33,12 +33,14 @@ class ListItemTemplate extends Component{
       // if it does not have subitem(s)
       (<div>
         <Divider/>
-        <ListItem button component={Router.Link} to={this.props.url}>
-          <ListItemIcon>
-            <IconComp/>
-          </ListItemIcon>
-          <ListItemText primary={this.props.label}/>
-        </ListItem>
+        <Router.NavLink exact to={this.props.url} key={this.props.label} activeClassName="active">
+          <ListItem button>
+            <ListItemIcon>
+              <IconComp/>
+            </ListItemIcon>
+            <ListItemText primary={this.props.label}/>
+          </ListItem>
+        </Router.NavLink>
       </div>)
 
     return(
