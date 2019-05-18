@@ -23,7 +23,7 @@ class ListItemTemplate extends Component{
           {this.props.collapsableTogglers[key]?<Icons.ExpandLess /> : <Icons.ExpandMore />}
         </ListItem>
         <div className="nested">
-          <Collapse in={this.props.collapsableTogglers[key] || false} timeout="auto" unmountOnExit>
+          <Collapse in={this.props.collapsableTogglers[key]} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               {this.props.subItems}
             </List>

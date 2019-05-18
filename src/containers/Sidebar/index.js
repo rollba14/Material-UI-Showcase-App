@@ -10,6 +10,11 @@ class Sidebar extends Component{
     let subItems = null;
     let key = node.label + '-Toggler';
     if(node['subNavItems']){
+      let obj = this.props.collapsableTogglers
+      if(Object.entries(obj).length === 0 && obj.constructor === Object){
+        if(window.location.pathname.indexOf(node.url) > -1)
+          this.props.toggleCollapsableItem(key)
+      }
       subItems = node['subNavItems'].map(n=>this.mapNodetoListItem(n))
     }
     return (
@@ -39,6 +44,7 @@ class Sidebar extends Component{
 
 const mapStateToProps = (state) =>{
   return{
+    collapsableTogglers: state.sideBarItems.collapsableTogglers,
     openSideBar: state.sideBarToggler.openSideBar,
     navItems: state.sideBarItems.navItems,
   }
