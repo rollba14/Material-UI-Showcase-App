@@ -5,7 +5,7 @@ import {AppBar, Toolbar, Drawer, Icons, IconButton, Button, withStyles, Typograp
 function Footer(props){
   return(
     <div className='footer'>
-      © 2019 Huan Ming Liao
+      © 2019
     </div>
   )
 
