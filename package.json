@@ -2,7 +2,7 @@
   "name": "material-ui-showcase-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://hmliao14.github.io/Material-UI-Showcase-App",
+  "homepage": "http://brandonliao14.github.io/Material-UI-Showcase-App",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
